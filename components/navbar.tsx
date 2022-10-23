@@ -1,6 +1,10 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Background from '../assets/bg.jpg';
 
+function MUNavDropdown(props) {
+    return <NavDropdown title={props.title} menuVariant='dark'>{props.children}</NavDropdown>
+}
+
 export default function MUNavbar() {
     return(
         <>
@@ -10,23 +14,23 @@ export default function MUNavbar() {
                         <Navbar.Brand href = '/'><h1 className='large'>Music Unbounded</h1></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse>
-                            <Nav variant="dark">
-                                <NavDropdown title = "About">
+                            <Nav>
+                                <MUNavDropdown title = "About">
                                     <Nav.Link href='/about'>About Us</Nav.Link> 
                                     <Nav.Link>Our Lessons</Nav.Link>
                                     <Nav.Link>Meet the Team</Nav.Link>
-                                </NavDropdown>
-                                <NavDropdown title="Get Involved">
+                                </MUNavDropdown>
+                                <MUNavDropdown title="Get Involved">
                                     <Nav.Link>Teach</Nav.Link>
                                     <Nav.Link>Volunteer</Nav.Link>
-                                </NavDropdown>
-                                <NavDropdown title="Register">
+                                </MUNavDropdown>
+                                <MUNavDropdown title="Register">
                                     <Nav.Link>Register</Nav.Link>
-                                </NavDropdown>
-                                <NavDropdown title="Help">
+                                </MUNavDropdown>
+                                <MUNavDropdown title="Help">
                                     <Nav.Link>Contact</Nav.Link>
                                     <Nav.Link>FAQ</Nav.Link>
-                                </NavDropdown>
+                                </MUNavDropdown>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
