@@ -1,10 +1,27 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Background from '../assets/bg.jpg';
 
-function MUNavDropdown(props) {
+/**
+ * interface to pass through props into the NavDropdown
+ */
+declare interface DropdownTitleProps {
+    children: React.ReactNode;
+    title: string;
+};
+
+/**
+ * 
+ * @param props title
+ * @returns Nav dropdown that automatically has the dark variant applied
+ */
+function MUNavDropdown(props: DropdownTitleProps) {
     return <NavDropdown title={props.title} menuVariant='dark'>{props.children}</NavDropdown>
 }
 
+/**
+ * 
+ * @returns The navbar for the website
+ */
 export default function MUNavbar() {
     return(
         <>

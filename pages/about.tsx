@@ -1,7 +1,10 @@
 import MUHeader from "../components/header";
-import MUNavbar from "../components/navbar";
 import { Container } from "react-bootstrap";
 
+/**
+ * 
+ * @returns about page
+ */
 export default function About() {
     return (
     <>
