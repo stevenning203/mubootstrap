@@ -2,7 +2,7 @@ import MUHeader from "../components/header";
 import MUNavbar from "../components/navbar";
 import { Container } from "react-bootstrap";
 
-export default function About() {
+export default function Lessons() {
     return (
     <>
         <MUHeader />
