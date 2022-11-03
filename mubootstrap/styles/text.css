@@ -1,0 +1,15 @@
+.white-text {
+    color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+.large {
+    font-size: 20pt;
+}
+
+.heavy {
+    font-weight: bolder;
+}

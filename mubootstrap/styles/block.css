@@ -1,0 +1,15 @@
+.bg-dark {
+    background-color: gray;
+}
+
+.bg-blue {
+    background-color: skyblue;
+}
+
+.rounded {
+    border-radius: 3pt;
+}
+
+.absolute {
+    position: absolute;
+}
