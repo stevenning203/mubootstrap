@@ -4,6 +4,10 @@ import { Nav, Container, Navbar, Button, Row, Col } from 'react-bootstrap'
 import MUHeader from '../components/header'
 import Background from '../assets/bg.jpg'
 
+/**
+ * 
+ * @returns index page
+ */
 export default function Home() {
     return (
         <>
