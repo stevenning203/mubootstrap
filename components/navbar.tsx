@@ -34,19 +34,19 @@ export default function MUNavbar() {
                             <Nav>
                                 <MUNavDropdown title = "About">
                                     <Nav.Link href='/about'>About Us</Nav.Link> 
-                                    <Nav.Link>Our Lessons</Nav.Link>
-                                    <Nav.Link>Meet the Team</Nav.Link>
+                                    <Nav.Link href='/lessons'>Our Lessons</Nav.Link>
+                                    <Nav.Link href='/our-team'>Meet the Team</Nav.Link>
                                 </MUNavDropdown>
                                 <MUNavDropdown title="Get Involved">
                                     <Nav.Link>Teach</Nav.Link>
-                                    <Nav.Link>Volunteer</Nav.Link>
+                                    <Nav.Link href='/volunteer'>Volunteer</Nav.Link>
                                 </MUNavDropdown>
                                 <MUNavDropdown title="Register">
-                                    <Nav.Link>Register</Nav.Link>
+                                    <Nav.Link href='/register'>Register</Nav.Link>
                                 </MUNavDropdown>
                                 <MUNavDropdown title="Help">
-                                    <Nav.Link>Contact</Nav.Link>
-                                    <Nav.Link>FAQ</Nav.Link>
+                                    <Nav.Link href='/contact'>Contact</Nav.Link>
+                                    <Nav.Link href='/help'>FAQ</Nav.Link>
                                 </MUNavDropdown>
                             </Nav>
                         </Navbar.Collapse>
