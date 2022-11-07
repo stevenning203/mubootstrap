@@ -38,7 +38,7 @@ export default function MUNavbar() {
                                     <Nav.Link href='/our-team'>Meet the Team</Nav.Link>
                                 </MUNavDropdown>
                                 <MUNavDropdown title="Get Involved">
-                                    <Nav.Link>Teach</Nav.Link>
+                                    <Nav.Link href='/teach'>Teach</Nav.Link>
                                     <Nav.Link href='/volunteer'>Volunteer</Nav.Link>
                                 </MUNavDropdown>
                                 <MUNavDropdown title="Register">
