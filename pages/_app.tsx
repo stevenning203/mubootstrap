@@ -4,7 +4,6 @@ import '../styles/text.css';
 import '../styles/block.css';
 import '../styles/trinket.css'
 import '../styles/anim.css';
-import SSRProvider from 'react-bootstrap/SSRProvider';
 
 /**
  * Do not touch this function, it will break things.
@@ -14,9 +13,7 @@ import SSRProvider from 'react-bootstrap/SSRProvider';
  */
 function MyApp({ Component, pageProps }) {
   return (
-    <SSRProvider>
-        <Component {...pageProps} />
-    </SSRProvider>
+    <Component {...pageProps} />
   )
 }
 
