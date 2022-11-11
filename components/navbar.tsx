@@ -1,21 +1,17 @@
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Background from '../assets/bg.jpg';
-
-/**
- * interface to pass through props into the NavDropdown
- */
-declare interface DropdownTitleProps {
-    children: React.ReactNode;
-    title: string;
-};
+import Logo from '../assets/logo.png';
 
 /**
  * 
- * @param props title
- * @returns Nav dropdown that automatically has the dark variant applied
+ * @param props children
+ * @returns nav element
  */
-function MUNavDropdown(props: DropdownTitleProps) {
-    return <NavDropdown title={props.title} menuVariant='dark'>{props.children}</NavDropdown>
+function MUNavLink(props: {children}) {
+    return (
+        <div className='inline-block'>
+            {props.children}
+        </div>
+    )
 }
 
 /**
@@ -25,7 +21,26 @@ function MUNavDropdown(props: DropdownTitleProps) {
 export default function MUNavbar() {
     return(
         <>
-            <Container fluid className = 'absolute'>
+            <nav className="flex bg-white">
+                <div className="hidden xl:flex xl:basis-1/3 basis-0">
+                    <div className='text-lg pl-10 py-4 pr-10'>
+                        <a>About</a>
+                    </div>
+                    <div className='text-lg py-4 pr-10'>
+                        <a>Get Involved</a>
+                    </div>
+                    <div className='text-lg py-4 pr-10'>
+                        <a>Register</a>
+                    </div>
+                </div>
+                <div className="py-4 grow text-center">
+                    <a href ='/'><span className ='font-bold hover:text-gray-900 text-2xl'>Music Unbounded</span></a>
+                </div>
+                <div className="hidden xl:flex xl:basis-1/3">
+                    
+                </div>
+            </nav>
+            {/* <Container fluid className = 'absolute'>
                 <Navbar expand = 'lg' variant='dark'>
                     <Container fluid>
                         <Navbar.Brand href = '/'><h1 className='large'>Music Unbounded</h1></Navbar.Brand>
@@ -52,7 +67,7 @@ export default function MUNavbar() {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-            </Container>
+            </Container> */}
         </>
     )
 }
