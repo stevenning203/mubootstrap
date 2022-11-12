@@ -1,5 +1,4 @@
 import MUHeader from "../components/header";
-import { Container } from "react-bootstrap";
 
 /**
  * 
@@ -9,9 +8,9 @@ export default function Help() {
     return (
     <>
         <MUHeader />
-        <Container fluid style = {{backgroundColor: "pink", minHeight: "100vh"}}>
+        <div style = {{backgroundColor: "pink", minHeight: "100vh"}}>
                 
-        </Container>
+        </div>
     </>
     )
 }
