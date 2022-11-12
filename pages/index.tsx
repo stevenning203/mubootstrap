@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <>
             <MUHeader />
-            <div className='bg-slate-500 h-screen'>
+            <div className='h-screen'>
                 
             </div>
         </>
