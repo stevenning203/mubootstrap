@@ -1,6 +1,7 @@
 import Background from '../assets/bg.jpg';
 import Logo from '../assets/logo.png';
 import React, {useState} from "react";
+import useComponentVisible from '../logic/use_component_visible';
 
 /**
  * 
@@ -34,14 +35,14 @@ function DropDownItem(props: {children, link}) {
  * @returns nav dropdown
  */
 function NavDropdown(props: {children, title: string}) {
-    const [open, setOpen] = useState(false);
+    const {ref, isComponentVisible, setIsComponentVisible} = useComponentVisible(false);
     return (
         <div>
-            <div className='cursor-pointer' onClick={()=>{setOpen(!open)}}>
+            <div className='cursor-pointer' onClick={()=>{setIsComponentVisible(!isComponentVisible)}}>
                 <MUNavItem>{props.title}</MUNavItem>
             </div>
-            {open &&
-            <div className='border shadow border-solid border-gray-400 flex flex-col absolute t-3 origin-top-left bg-white rounded-md'>
+            {isComponentVisible &&
+            <div ref={ref} className='border shadow border-solid border-gray-400 flex flex-col absolute t-3 origin-top-left bg-white rounded-md'>
                 {props.children}
             </div>}
         </div>
