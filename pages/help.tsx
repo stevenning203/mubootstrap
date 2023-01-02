@@ -1,4 +1,5 @@
 import MUHeader from "../components/header";
+import MUPage from "../components/page";
 
 /**
  * 
@@ -6,11 +7,8 @@ import MUHeader from "../components/header";
  */
 export default function Help() {
     return (
-    <>
-        <MUHeader />
-        <div style = {{backgroundColor: "pink", minHeight: "100vh"}}>
-                
-        </div>
-    </>
+        <MUPage>
+
+        </MUPage>
     )
 }

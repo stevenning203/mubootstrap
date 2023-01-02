@@ -79,6 +79,9 @@ export default function MUNavbar() {
                         <DropDownItem link='/teach'>
                             Teach
                         </DropDownItem>
+                        <DropDownItem link='/contact'>
+                            Contact Us
+                        </DropDownItem>
                     </NavDropdown>
                     <NavDropdown title='Register'>
                         <DropDownItem link='/register'>

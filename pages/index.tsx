@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import MUHeader from '../components/header'
 import Background from '../assets/bg.jpg'
+import MUPage from '../components/page'
 
 /**
  * 
@@ -9,11 +10,10 @@ import Background from '../assets/bg.jpg'
  */
 export default function Home() {
     return (
-        <>
-            <MUHeader />
+        <MUPage>
             <div className='h-screen'>
-                
+                Wow!
             </div>
-        </>
+        </MUPage>
     )
 }
