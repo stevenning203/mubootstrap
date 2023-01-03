@@ -1,5 +1,4 @@
-import MUHeader from "../components/header";
-import MUNavbar from "../components/navbar";
+import MUPage from "../components/page";
 
 /**
  * 
@@ -7,11 +6,10 @@ import MUNavbar from "../components/navbar";
  */
 export default function Lessons() {
     return (
-    <>
-        <MUHeader />
-        <div style = {{backgroundColor: "black", minHeight: "100vh"}}>
+        <MUPage>
+            <div style={{ backgroundColor: "black", minHeight: "100vh" }}>
                 
-        </div>
-    </>
+            </div>
+        </MUPage>
     )
 }
