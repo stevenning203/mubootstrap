@@ -1,8 +1,10 @@
 import { ReactNode } from "react"
+import facebook_icon from '../assets/facebook_logo.png';
+import instagram_icon from '../assets/instagram_logo.png';
 
 function FooterTitle(props: { children: ReactNode }) {
     return (
-        <div className='text-xl'>
+        <div className='pb-2 text-2xl text-white'>
             {props.children}
         </div>
     )
@@ -26,7 +28,8 @@ function FooterLink(props: { title: string, dest: string }) {
 
 export default function Footer() {
     return (
-        <footer className='flex gap-3'>
+        <footer className='pl-[10%] pr-[10%] bg-blue-800 text-sky-300'>
+            <div className='pt-10 pb-10 flex gap-4 flex-wrap'>
             <FooterColumn>
                 <FooterTitle>About Us</FooterTitle>
                 <FooterLink title='About' dest='/about' />
@@ -45,12 +48,16 @@ export default function Footer() {
             <FooterColumn>
                 <form action='/contact'>
                     <button className='text-lg border p-3 rounded-lg bg-sky-300 text-white'>Contact Us</button>
-                </form>
-
-                <div>
-                    Music Unbounded charity registration number: 799098306RR0001
-                </div>
-            </FooterColumn>
+                    </form>
+                </FooterColumn>
+            </div>
+            <div className='flex flex-wrap gap-3 pb-3'>
+                <a href='http://www.facebook.com/MusicUnbounded.nonprofit/'><img className='h-10' src={facebook_icon.src} /></a>
+                <a href='http://www.instagram.com/music.unbounded/'><img className='h-10' src={instagram_icon.src} /></a>
+            </div>
+            <div className='pb-10'>
+                Registration Number: 799098306RR0001
+            </div>
         </footer>
     )
 }

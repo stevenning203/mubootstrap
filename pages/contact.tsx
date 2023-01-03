@@ -1,4 +1,5 @@
 import MUHeader from "../components/header";
+import MUPage from "../components/page";
 
 /**
  * 
@@ -6,11 +7,10 @@ import MUHeader from "../components/header";
  */
 export default function Contact() {
     return (
-    <>
-        <MUHeader />
-        <div style = {{backgroundColor: "black", minHeight: "100vh"}}>
+        <MUPage>
+            <div style={{ backgroundColor: "black", minHeight: "100vh" }}>
                 
-        </div>
-    </>
+            </div>
+        </MUPage>
     )
 }
