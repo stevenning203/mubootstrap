@@ -16,7 +16,7 @@ export default function Home() {
                 ml-[5%] flex-col justify-center items-center'>
                     <h1 className='w-[100%] text-white font-lighter text-left text-4xl lg:text-7xl md:text-5xl font-lato tracking-[.02em] leading-tight  pb-[30px]'>Making Music Possible, <br /> for Every Child</h1>
                     <form action='/register'>
-                        <button className='h-10 bg-[#3399ff] hover:bg-blue-800 text-white tracking-[.1em] font-bold p-2.5 px-4 w-40 font-lato .text-xl'>Register</button>
+                        <button className='h-10 bg-[#3399ff] hover:bg-blue-800 text-white tracking-[.1em] font-bold p-2.5 px-4 w-40 font-lato .text-xl rounded-lg transition duration-[450ms]'>Register</button>
                     </form>
                 </div>
             </div>
