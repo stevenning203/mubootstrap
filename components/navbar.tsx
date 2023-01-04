@@ -23,9 +23,7 @@ function MUNavItem(props: {children}) {
  */
 function DropDownItem(props: {children, link}) {
     return (
-        <div className='text-center pt-3 pb-3 hover:bg-gray-100 rounded-md'>
-            <a href={props.link}>{props.children}</a>
-        </div>
+        <a href={props.link}><div className='text-center pt-3 pb-3 hover:bg-gray-100 rounded-md'>{props.children}</div></a>
     )
 }
 
