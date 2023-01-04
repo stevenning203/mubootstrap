@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
-import facebook_icon from '../assets/facebook_logo.png';
-import instagram_icon from '../assets/instagram_logo.png';
+// import facebook_icon from '../assets/facebook_logo.png';
+// import instagram_icon from '../assets/instagram_logo.png';
+import {FaInstagram, FaFacebook} from 'react-icons/fa'; 
 
 function FooterTitle(props: { children: ReactNode }) {
     return (
@@ -47,13 +48,17 @@ export default function Footer() {
             </FooterColumn>
             <FooterColumn>
                 <form action='/contact'>
-                    <button className='text-lg border p-3 rounded-lg bg-sky-300 text-white'>Contact Us</button>
+                    <button className='text-lg py-2 px-3 rounded-lg bg-[#3399ff] text-white'>Contact Us</button>
                     </form>
                 </FooterColumn>
             </div>
             <div className='flex flex-wrap gap-3 pb-3'>
-                <a href='http://www.facebook.com/MusicUnbounded.nonprofit/'><img className='h-10' src={facebook_icon.src} /></a>
-                <a href='http://www.instagram.com/music.unbounded/'><img className='h-10' src={instagram_icon.src} /></a>
+                <a href='http://www.facebook.com/MusicUnbounded.nonprofit/'>
+                    <FaFacebook color="white" size={35} />
+                    </a>
+                <a href='http://www.instagram.com/music.unbounded/'>
+                <FaInstagram color="white" size={35} />
+                </a>
             </div>
             <div className='pb-10'>
                 Registration Number: 799098306RR0001

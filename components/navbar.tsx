@@ -23,8 +23,8 @@ function MUNavItem(props: {children}) {
  */
 function DropDownItem(props: {children, link}) {
     return (
-        <div className='text-right'>
-            <a className = "hover:text-black" href={props.link}>{props.children}</a>
+        <div className='text-center pt-3 pb-3 hover:bg-gray-100 rounded-md'>
+            <a href={props.link}>{props.children}</a>
         </div>
     )
 }
@@ -41,11 +41,10 @@ function NavDropdown(props: {children, title: string}) {
             <div className='whitespace-nowrap cursor-pointer' onClick={()=>{setIsComponentVisible(!isComponentVisible)}}>
                 <MUNavItem>{props.title}</MUNavItem>
             </div>
-            <div ref={ref} className={`${isComponentVisible ? "max-h-auto border shadow border-solid border-gray-400" : "max-h-0 overflow-hidden"} flex flex-col absolute right-0 min-w-full bg-white rounded-md`}>
+            <div ref={ref} className={`${isComponentVisible ? "max-h-auto" : "max-h-0 overflow-hidden"} flex flex-col absolute right-0 min-w-full bg-white rounded-md`}>
                 {props.children}
             </div>
         </div>
-        
     )
 }
 
