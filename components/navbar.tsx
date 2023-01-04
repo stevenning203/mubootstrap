@@ -8,7 +8,7 @@ import useComponentVisible from '../logic/use_component_visible';
  * @param props children
  * @returns nav element
  */
-function MUNavItem(props: {children}) {
+function MUNavItem(props: { children: React.ReactNode }) {
     return (
         <div className='text-lg py-4 pr-5 pl-5 hover:bg-gray-200 duration-500 transition'>
             {props.children}
@@ -21,7 +21,7 @@ function MUNavItem(props: {children}) {
  * @param props children
  * @returns nav dropdown child
  */
-function DropDownItem(props: {children, link}) {
+function DropDownItem(props: { children: React.ReactNode, link: string }) {
     return (
         <div className='text-center pt-3 pb-3 hover:bg-gray-100 rounded-md'>
             <a href={props.link}>{props.children}</a>
@@ -34,7 +34,7 @@ function DropDownItem(props: {children, link}) {
  * @param props children
  * @returns nav dropdown
  */
-function NavDropdown(props: {children, title: string}) {
+function NavDropdown(props: { children: React.ReactNode, title: string }) {
     const {ref, isComponentVisible, setIsComponentVisible} = useComponentVisible(false);
     return (
         <div className='relative'>
