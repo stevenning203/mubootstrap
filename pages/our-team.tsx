@@ -1,6 +1,6 @@
 import MUPage from "../components/page";
 import TeamMemberCard from "../components/team_member_card";
-import PageTitle from "../components/util";
+import { PageTitle } from "../components/util";
 import alex_cai from '../assets/team_portraits/alex_cai.png';
 import mark_maclure from '../assets/team_portraits/mark_maclure.png';
 import gabriel_liu from '../assets/team_portraits/gabriel_liu.png';
