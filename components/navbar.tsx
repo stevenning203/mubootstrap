@@ -36,7 +36,7 @@ function DropDownItem(props: { children: React.ReactNode, link: string }) {
 function NavDropdown(props: { children: React.ReactNode, title: string }) {
     const {ref, isComponentVisible, setIsComponentVisible} = useComponentVisible(false);
     return (
-        <div className='relative'>
+        <div className='relative min-w-[9rem] text-center'>
             <div className='whitespace-nowrap cursor-pointer' onClick={()=>{setIsComponentVisible(!isComponentVisible)}}>
                 <MUNavItem>{props.title}</MUNavItem>
             </div>
