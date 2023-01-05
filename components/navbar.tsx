@@ -57,7 +57,7 @@ export default function MUNavbar() {
                 <div className="ml-10 py-4 grow">
                     <a href ='/'><span className ='font-bold hover:text-sky-300 text-2xl transition-all duration-500'>Music Unbounded</span></a>
                 </div>
-                <div className="hidden flex-row-reverse lg:flex lg:basis-1/3 basis-0">
+                <div className="hidden justify-end lg:flex lg:basis-1/3 basis-0">
                     <NavDropdown title='About'> 
                         <DropDownItem link='/about'>
                             About Us
