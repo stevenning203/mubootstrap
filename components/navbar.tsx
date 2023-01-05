@@ -2,6 +2,7 @@ import Background from '../assets/bg.jpg';
 import Logo from '../assets/logo.png';
 import React, {useState} from "react";
 import useComponentVisible from '../logic/use_component_visible';
+import { nav_options } from '../page_data/nav_options';
 
 /**
  * 
@@ -58,33 +59,17 @@ export default function MUNavbar() {
                     <a href ='/'><span className ='font-bold hover:text-sky-300 text-2xl transition-all duration-500'>Music Unbounded</span></a>
                 </div>
                 <div className="hidden justify-end lg:flex lg:basis-1/3 basis-0">
-                    <NavDropdown title='About'> 
-                        <DropDownItem link='/about'>
-                            About Us
-                        </DropDownItem>
-                        <DropDownItem link="/lessons">
-                            Our Lessons
-                        </DropDownItem>
-                        <DropDownItem link='/our-team'>
-                            Our Team
-                        </DropDownItem>
-                    </NavDropdown>
-                    <NavDropdown title='Get Involved'>
-                        <DropDownItem link='/volunteer'>
-                            Volunteer
-                        </DropDownItem>
-                        <DropDownItem link='/teach'>
-                            Teach
-                        </DropDownItem>
-                        <DropDownItem link='/contact'>
-                            Contact Us
-                        </DropDownItem>
-                    </NavDropdown>
-                    <NavDropdown title='Register'>
-                        <DropDownItem link='/register'>
-                            Register
-                        </DropDownItem>
-                    </NavDropdown>
+                    {nav_options.map((opt, i) => {
+                        return (<NavDropdown title={opt.parent_title}>
+                            {opt.children.map((opt_item, i) => {
+                                return (
+                                    <DropDownItem link={opt_item.dest}>
+                                        {opt_item.label}
+                                    </DropDownItem>
+                                )
+                            })}
+                        </NavDropdown>)
+                    })}
                 </div>
                 <div className="flex lg:hidden basis:1">
                     <div onClick={()=>{alert("")}} className="cursor-pointer lg:hidden text-5xl mr-5 mt-3">
