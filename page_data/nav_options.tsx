@@ -1,8 +1,8 @@
 export const nav_options: { parent_title: string, children: { label: string, dest: string }[] }[] = [
     {
-        parent_title: "About", children: [
+        parent_title: "About Us", children: [
             {
-                label: "About Us", dest: "/about"
+                label: "About MU", dest: "/about"
             },
             {
                 label: "Our Lessons", dest: "/lessons"
@@ -28,7 +28,7 @@ export const nav_options: { parent_title: string, children: { label: string, des
         ]
     },
     {
-        parent_title: "More", children: [
+        parent_title: "Work with Us", children: [
             {
                 label: "Partner with us", dest: "/partner"
             },
@@ -36,7 +36,7 @@ export const nav_options: { parent_title: string, children: { label: string, des
                 label: "Contact Us", dest: "/contact"
             },
             {
-                label: "store", dest: "/store"
+                label: "Store", dest: "http://music-unbounded.creator-spring.com/"
             }
         ]
     },
