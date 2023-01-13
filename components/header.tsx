@@ -7,11 +7,11 @@ import MUNavbar from "./navbar";
  */
 export default function MUHeader() {
     return (
-        <>
+        <div>
             <Head>
                 <title>Music Unbounded</title>
             </Head>
             <MUNavbar />
-        </>
+        </div>
     )
 }
