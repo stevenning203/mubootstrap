@@ -35,10 +35,10 @@ export const nav_options: { parent_title: string, children: { label: string, des
 
 export const single_nav_options: { title: string, dest: string }[] = [
     {
-        title: "Contact", dest: "/contact"
+        title: "Register", dest: "/register"
     },
     {
-        title: "Register", dest: "/register"
+        title: "Contact", dest: "/contact"
     },
     {
         title: "Store", dest: "http://music-unbounded.creator-spring.com/"
