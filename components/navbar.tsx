@@ -42,7 +42,7 @@ function NavDropdown(props: { children: React.ReactNode, title: string }) {
             <div className='whitespace-nowrap cursor-pointer' onClick={() => { setIsComponentVisible(!isComponentVisible) }}>
                 <MUNavItem>{props.title}</MUNavItem>
             </div>
-            <div ref={ref} className={`${isComponentVisible ? "max-h-auto" : "max-h-0 overflow-hidden"} flex flex-col absolute right-0 min-w-full bg-white rounded-md`}>
+            <div ref={ref} className={`${isComponentVisible ? "max-h-auto" : "max-h-0 overflow-hidden"} flex flex-col absolute right-0 min-w-full bg-white rounded-md border border-black`}>
                 {props.children}
             </div>
         </div>
