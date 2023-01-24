@@ -4,6 +4,7 @@ import MUHeader from '../components/header'
 import Background from '../assets/bg.jpg'
 import MUPage from '../components/page'
 import { FlexDivider, MediaFlexDivider } from '../components/util'
+import { Quadrant } from '../components/util'
 
 function HomeButton(props: { label: string, dest: string, bg?: string }) {
     return (
@@ -14,15 +15,6 @@ function HomeButton(props: { label: string, dest: string, bg?: string }) {
             </button>
         </form>
 
-    )
-}
-
-function Quadrant(props: { children: React.ReactNode, title: string, bg?: string }) {
-    return (
-        <div className={props.bg + ' text-center flex-1'}>
-            <h2 className='font-lato p-10 text-5xl'>{props.title}</h2>
-            <div className='text-lg'>{props.children}</div>
-        </div>
     )
 }
 

@@ -49,6 +49,15 @@ export function FlexDivider() {
     )
 }
 
+export function Quadrant(props: { children: React.ReactNode, title: string, bg?: string }) {
+    return (
+        <div className={props.bg + ' text-center flex-1'}>
+            <h2 className='font-lato p-10 text-5xl'>{props.title}</h2>
+            <div className='mx-5 text-lg'>{props.children}</div>
+        </div>
+    )
+}
+
 /**
  * 
  * @returns flex divider that disappears above medium
