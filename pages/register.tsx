@@ -1,5 +1,5 @@
 import MUHeader from "../components/header";
-import MUForm, { Dropdown, EmailField, Field, PhoneField } from "../components/muform";
+import MUForm, { Dropdown, EmailField, Field, LargeField, PhoneField } from "../components/muform";
 import MUPage from "../components/page";
 import { BlueWideDiv, Blurb, PageTitle } from "../components/util";
 
@@ -40,9 +40,9 @@ export default function Register() {
                 <EmailField />
                 <Field required={true} name="Age">Student's Age</Field>
                 <PhoneField />
-                <Dropdown label="Instrument" options={instrument_options} />
-                <Dropdown label="Previous experience with chosen instrument" options={experience_options} />
-
+                <Dropdown label="Preferred Instrument" options={instrument_options}>Instrument</Dropdown>
+                <Dropdown label="Experience" options={experience_options}>Previous experience with chosen instrument</Dropdown>
+                <LargeField label="Statement">Please state possible lessons times including days of the week and times of day</LargeField>
             </MUForm>
         </MUPage>
     )

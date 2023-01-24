@@ -54,12 +54,21 @@ export function Field(props: { children: string, name: string, required?: boolea
     )
 }
 
-export function Dropdown(props: { label: string, options: string[] }) {
+export function LargeField(props: { children: string, label: string }) {
     return (
         <div className='text-lg'>
-            <div className='pb-2'><label htmlFor={props.label}>{props.label}</label></div>
-            <select id={props.label} className='w-full p-3 mb-5 border-b-2' required>
-                <option value='' disabled selected>Select an option</option>
+            <label className='mb-2' htmlFor={props.children}>{props.children}</label>
+            <textarea name={props.label} required rows={5} placeholder="Write your thoughts here..." id={props.children} className='p-3 text-lg w-full border-b-2 mb-5' />
+        </div>
+    )
+}
+
+export function Dropdown(props: { children: string, label: string, options: string[] }) {
+    return (
+        <div className='text-lg'>
+            <div className='pb-2'><label htmlFor={props.label}>{props.children}</label></div>
+            <select defaultValue={''} id={props.label} name={props.label} className='w-full p-3 mb-5 border-b-2' required>
+                <option value='' disabled>Select an option</option>
                 {props.options.map(s => {
                     return (
                         <option value={s}>{s}</option>

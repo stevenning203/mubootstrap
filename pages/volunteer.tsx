@@ -50,9 +50,13 @@ export default function Volunteer() {
             <MUForm className='mb-5 mt-10' apps_script_url={webapp_url}>
                 <Field required={true} name="Student Full Name">Name</Field>
                 <EmailField />
-                <Dropdown label="Are you 16 years of age or older?" options={["Yes", "No"]} />
+                <Dropdown label="Age" options={["Yes, 16 or older", "No, I'm younger than 16"]}>
+                    Are you 16 years of age or older?
+                </Dropdown>
                 <PhoneField />
-                <Dropdown label="Type" options={type_options} />
+                <Dropdown label="Type" options={type_options}>
+                    Type
+                </Dropdown>
             </MUForm>
         </MUPage>
     )
