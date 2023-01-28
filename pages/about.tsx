@@ -16,7 +16,12 @@ export default function About() {
         <MUPage>
             <div className=''>
             </div>
-            <PageTitle>Lessons</PageTitle>
+            <PageTitle>About</PageTitle>
+            <div className='w-full to-blue-400 py-10 bg-gradient-to-r gradient from-blue-600 text-white'>
+                <div className='w-3/5 ml-[20%] mr-[20%] text-xl'>
+                    Music Unbounded is a student-run organization aimed at providing an opportunity for children and youth 6-18 to learn music through free introductory lessons instructed by passionate volunteers.
+                </div>
+            </div>
         </MUPage>
     )
 }

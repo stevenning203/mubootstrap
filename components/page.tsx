@@ -8,7 +8,7 @@ import Footer from "./footer";
  * @param props children
  * @returns 
  */
-export default function MUPage(props: { children: ReactNode }) {
+export default function MUPage(props: { children?: ReactNode }) {
     return (
         <div>
             <MUHeader />
