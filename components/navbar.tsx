@@ -3,6 +3,7 @@ import Logo from '../assets/logo.png';
 import React, { useState } from "react";
 import useComponentVisible from '../logic/use_component_visible';
 import { nav_options, single_nav_options } from '../page_data/nav_options';
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 /**
  * 
@@ -11,7 +12,7 @@ import { nav_options, single_nav_options } from '../page_data/nav_options';
  */
 function MUNavItem(props: { children: React.ReactNode }) {
     return (
-        <div className='text-lg py-4 pr-5 pl-5 hover:bg-gray-200 duration-500 transition'>
+        <div className='rounded text-lg py-4 pr-5 pl-5 hover:bg-gray-200 duration-500 transition'>
             {props.children}
         </div>
     )
@@ -25,7 +26,7 @@ function MUNavItem(props: { children: React.ReactNode }) {
 function DropDownItem(props: { children: React.ReactNode, link: string }) {
     return (
         <div className='relative text-center'>
-        <a href={props.link}><div className='text-center p-3 hover:bg-gray-100 rounded-md'>{props.children}</div></a>
+            <a href={props.link}><div className='p-3 hover:bg-gray-100 rounded-md'>{props.children}</div></a>
         </div>
     )
 }
@@ -46,19 +47,6 @@ function NavDropdown(props: { children: React.ReactNode, title: string }) {
                 {props.children}
             </div>
         </div>
-    )
-}
-
-/**
- * 
- * @param props option
- * @returns nav single option
- */
-function NavSingleOption(title: string, dest: string) {
-    return (
-            <a className='text-lg py-4 pr-5 pl-5 hover:bg-gray-200 duration-500 transition' href={dest}>
-                {title}
-            </a>
     )
 }
 
@@ -89,14 +77,14 @@ export default function MUNavbar() {
 
                     {single_nav_options.map((opt, i) => {
                         return (
-                        NavSingleOption(opt.title, opt.dest)
+                            <MUNavItem><a href={opt.dest}>{opt.title}</a></MUNavItem>
                         )
                     })}
                     
                 </div>
                 <div className="flex lg:hidden basis:1">
                     <div onClick={() => { alert("") }} className="cursor-pointer lg:hidden text-5xl mr-5 mt-3">
-                        {"\u2261"}
+                        <RxHamburgerMenu />
                     </div>
                 </div>
             </nav>

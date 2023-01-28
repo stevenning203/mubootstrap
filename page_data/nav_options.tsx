@@ -11,6 +11,9 @@ export const nav_options: { parent_title: string, children: { label: string, des
                 label: "Programs", dest: "/programs"
             },
             {
+                label: "Our Team", dest: "our-team"
+            },
+            {
                 label: "FAQ", dest: '/faq'
             }]
     },

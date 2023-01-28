@@ -30,7 +30,7 @@ export default function OurTeam() {
     return (
         <MUPage>
             <div className='bg-blue-800'>
-                <PageTitle>Meet the Team</PageTitle>
+                <PageTitle className='text-white'>Meet the Team</PageTitle>
                 <div className='gap-5 justify-center ml-[10%] mr-[10%] flex flex-wrap'>
                     <TeamMemberCard img_src={gabriel_liu.src} name='Gabriel Liu' title="Cello Teacher">Hi there, I'm Gabe! I've been playing the cello for 12 years now, and have completed the STE/Suzuki program. I love to share my passion for music, whether that's through Edmonton Youth Orchestra, a cultural concert, or a volunteer performance at a charity gala. I can't wait to meet some of you and go on a musical journey together!</TeamMemberCard>
                     <TeamMemberCard img_src={alex_cai.src} name="Alex Cai" title="Trombone Teacher">Hi there, I'm Alex! I've been playing bass trombone in the Senior Edmonton Youth Orchestra for the past three years and I also have a Grade 10 RCM certificate in piano. I'm passionate about music from a variety of genres and excited to help on your musical journey!</TeamMemberCard>
