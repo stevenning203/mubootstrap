@@ -60,11 +60,11 @@ export const MobileHamburgerOptions = () => {
         <div className='absolute -right-0 bg-slate-700 rounded-lg bg-opacity-50'>
             {nav_options.map((opt, i) => {
                 return (
-                    <div>
+                    <div className='last:pb-5'>
                         {opt.children.map((child) => {
                             return (
-                                <div key={child.dest} className='container last:pb-4'>
-                                    <a href={child.dest} className='text-sm object-contain text-white'>{child.label}</a>
+                                <div key={child.dest} className='container'>
+                                    <a href={child.dest} className='text-sm text-white'>{child.label}</a>
                                 </div>
                             )
                         }) }
