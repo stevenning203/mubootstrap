@@ -57,16 +57,14 @@ function NavDropdown(props: { children: React.ReactNode, title: string }) {
  */
 export const MobileHamburgerOptions = () => {
     return (
-        <div>
+        <div className='absolute -right-0 bg-slate-700 rounded-lg bg-opacity-50'>
             {nav_options.map((opt, i) => {
                 return (
                     <div>
                         {opt.children.map((child) => {
                             return (
-                                <div key={child.dest}>
-                                    <div className='container'>
-                                        <a href={child.dest} className='text-sm'>{child.label}</a>
-                                    </div>
+                                <div key={child.dest} className='container last:pb-4'>
+                                    <a href={child.dest} className='text-sm object-contain text-white'>{child.label}</a>
                                 </div>
                             )
                         }) }
@@ -87,7 +85,7 @@ export const MobileHamburgerMenu = () => {
 
     return (
         <div>
-            <RxHamburgerMenu onClick={() => setOpen(!open)} className=''/>
+            <RxHamburgerMenu onClick={() => setOpen(!open)} className='relative right-0'/>
             {open && <MobileHamburgerOptions />} 
         </div>
     )
