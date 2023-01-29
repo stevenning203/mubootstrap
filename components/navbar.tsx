@@ -50,6 +50,49 @@ function NavDropdown(props: { children: React.ReactNode, title: string }) {
     )
 }
 
+
+/**
+ * 
+ * @returns hamburger options for mobile devices
+ */
+export const MobileHamburgerOptions = () => {
+    return (
+        <div>
+            {nav_options.map((opt, i) => {
+                return (
+                    <div>
+                        {opt.children.map((child) => {
+                            return (
+                                <div key={child.dest}>
+                                    <div className='container'>
+                                        <a href={child.dest} className='text-sm'>{child.label}</a>
+                                    </div>
+                                </div>
+                            )
+                        }) }
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
+
+/**
+ * 
+ * @returns nav hamburger menu
+ */
+export const MobileHamburgerMenu = () => {
+    
+    const [open, setOpen] = useState(false);
+
+    return (
+        <div>
+            <RxHamburgerMenu onClick={() => setOpen(!open)} className=''/>
+            {open && <MobileHamburgerOptions />} 
+        </div>
+    )
+}
+
 /**
  * 
  * @returns The navbar for the website
@@ -83,8 +126,8 @@ export default function MUNavbar() {
                     
                 </div>
                 <div className="flex lg:hidden basis:1">
-                    <div onClick={() => { alert("") }} className="cursor-pointer lg:hidden text-5xl mr-5 py-3">
-                        <RxHamburgerMenu />
+                    <div className="cursor-pointer lg:hidden text-5xl mr-5 py-3">
+                        <MobileHamburgerMenu />
                     </div>
                 </div>
             </nav>
