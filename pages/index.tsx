@@ -34,28 +34,10 @@ export default function Home() {
                 </form>
             </div>
         </div>
-        <div className='text-white bg-[#1e40af]'>
-            <h1 className='text-center p-10 font-lato text-4xl lg:text-6xl'>Join our ever-growing community of volunteers, <br /> young students, and teachers.</h1>
+            <div className='text-white bg-gradient-to-b from-black to-gray-800'>
+                <h1 className='text-center px-5 h-screen font-bold flex items-center text-4xl lg:text-6xl'>Join our ever-growing community of volunteers, <br /> young students, and teachers.</h1>
             <div className='flex flex-wrap'>
-                <Quadrant bg="bg-[#3399ff]" title='Volunteer'>
-                    <h3>Help us fundraise and support our events</h3>
-                    <HomeButton bg="bg-[#1e40af]" label='Apply' dest='/volunteer' />
-                </Quadrant>
-                <MediaFlexDivider />
-                <Quadrant title='Teach'>
-                    <h3>Spread your love for music</h3>
-                    <HomeButton bg="bg-[#3399ff]" label='Apply' dest='/teach' />
-                </Quadrant>
-                <FlexDivider />
-                <Quadrant title='Register'>
-                    <h3>Start your child's music journey</h3>
-                    <HomeButton bg="bg-[#3399ff]" label='Register' dest='/register' />
-                </Quadrant>
-                <MediaFlexDivider />
-                <Quadrant bg='bg-[#3399ff]' title='Donate'>
-                    <h3>Help us run Music Unbounded</h3>
-                    <HomeButton bg="bg-[#1e40af]" label='Learn More' dest='/donate' />
-                </Quadrant>
+
             </div>
         </div>
     </MUPage>

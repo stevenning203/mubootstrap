@@ -58,7 +58,7 @@ export default function MUNavbar() {
     return (
         <div>
             <nav className="flex bg-white">
-                <div className="ml-10 py-4 grow">
+                <div className="ml-10 flex items-center grow">
                     <a href='/'><span className='font-bold hover:text-sky-300 text-2xl transition-all duration-500'>Music Unbounded</span></a>
                 </div>
                 <div className="hidden justify-end lg:flex lg:basis-1/3 basis-0">
@@ -83,7 +83,7 @@ export default function MUNavbar() {
                     
                 </div>
                 <div className="flex lg:hidden basis:1">
-                    <div onClick={() => { alert("") }} className="cursor-pointer lg:hidden text-5xl mr-5 mt-3">
+                    <div onClick={() => { alert("") }} className="cursor-pointer lg:hidden text-5xl mr-5 py-3">
                         <RxHamburgerMenu />
                     </div>
                 </div>
