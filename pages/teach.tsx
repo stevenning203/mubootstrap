@@ -71,9 +71,9 @@ export default function Teach() {
             <MUForm className='mb-5 mt-10' apps_script_url={webapp_url}>
                 <Field required={true} name="Student Full Name">Name</Field>
                 <EmailField />
-                <Dropdown label="Are you 18 years of age or older?" options={["Yes", "No"]} />
+                <Dropdown label="Adult" options={["Yes", "No"]}>Are you 18 years of age or older?</Dropdown>
                 <PhoneField />
-                <Dropdown label="Instrument" options={instrument_options} />
+                <Dropdown label="Instrument" options={instrument_options}>Instrument</Dropdown>
             </MUForm>
         </MUPage>
     )
