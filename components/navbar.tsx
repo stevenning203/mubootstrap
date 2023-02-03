@@ -118,7 +118,7 @@ export default function MUNavbar() {
 
                     {single_nav_options.map((opt, i) => {
                         return (
-                            <MUNavItem><a href={opt.dest}>{opt.title}</a></MUNavItem>
+                            <a href={opt.dest}><MUNavItem>{opt.title}</MUNavItem></a>
                         )
                     })}
                     
