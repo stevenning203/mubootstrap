@@ -7,18 +7,16 @@ import { FlexDivider, MediaFlexDivider, PageTitle } from '../components/util'
 import { Quadrant } from '../components/util'
 import Person from '../assets/person.svg'
 import Accordian from '../components/accordian'
-
-function HomeButton(props: { label: string, dest: string, bg?: string }) {
-    return (
-        <form action={props.dest}>
-            <button className={props.bg + ' text-white p-3 mt-10 mb-24 rounded-md'
-        + ' transition ease-in-out delay-150 hover:scale-110 duration-300'}>
-                {props.label}
-            </button>
-        </form>
-
-    )
-}
+import Piano from '../assets/piano2.jpg'
+import Flute from '../assets/flute.jpeg'
+import Violin from '../assets/violin.jpg'
+import Trombone from '../assets/trombone.jpg'
+import Viola from '../assets/viola.jpg'
+import Guitar from '../assets/guitar.jpg'
+import Cello from '../assets/cello.jpg'
+import Tuba from '../assets/tuba.jpg'
+import Trumpet from '../assets/trumpet.jpg'
+import Clarinet from '../assets/clarinet.jpg'
 
 function HomeCard(props: { children: React.ReactNode, title: string }) {
     return (
@@ -59,18 +57,36 @@ ml-[5%] flex-col justify-center items-center'>
             <div className="min-h-screen lg:bg-[url('../assets/person.svg')] bg-right bg-no-repeat mb-32">
                 <PageTitle>Instruments We Teach</PageTitle>
                 <div className='w-[60%] mx-auto flex-col flex gap-2'>
-                    <Accordian title="Piano">
+                    <Accordian image={Piano} title="Piano">
                         A popular and versatile instrument, the piano is one of the best choices for beginners because of its simplicity. Many people know famous composers and songs for the piano.
                     </Accordian>
-                    <Accordian title="Flute">Flute</Accordian>
-                    <Accordian title="Violin">Hello</Accordian>
-                    <Accordian title="Trombone">Hello</Accordian>
-                    <Accordian title="Viola">Hello</Accordian>
-                    <Accordian title="Guitar">Hello</Accordian>
-                    <Accordian title="Cello">Hello</Accordian>
-                    <Accordian title="Tuba">Hello</Accordian>
-                    <Accordian title="Trumpet">Hello</Accordian>
-                    <Accordian title="Clarinet">Hello</Accordian>
+                    <Accordian image={Flute} title="Flute">
+                        The flute is a lightweight instrument capable of producing a clear and bright sound with a distinctive warmth, refinement, and subtlety to its tone.
+                    </Accordian>
+                    <Accordian image={Violin} title="Violin">
+                        The violin is a bowed stringed instrument which gained popularity during the 16th century. The violin is known for its unique vocal quality and is often the focus in many symphony orchestras.
+                    </Accordian>
+                    <Accordian image={Trombone} title="Trombone">
+                        A brass instrument that requires excellent command of embouchure and breathing. It has a deep tone that makes it desirable in in symphony orchestras, jazz bands, and more.
+                    </Accordian>
+                    <Accordian image={Viola} title="Viola">
+                        While similar in appearance to the violin, the viola acts as the sweeter inner voice of any orchestra.
+                    </Accordian>
+                    <Accordian image={Guitar} title="Guitar">
+                        The guitar is a portable instrument perfect for solos and performances. It is fashionable and great to learn and play.
+                    </Accordian>
+                    <Accordian image={Cello} title="Cello">
+                        The cello is a low-pitched string instrument popular for its rich and warm tones. Its contrast to the violin and viola make it an excellent companion to its higher pitched siblings.
+                    </Accordian>
+                    <Accordian image={Tuba} title="Tuba">
+                        The tuba is like the trumpet's older sibling. It produces a strong and richly deep tone, providing a backbone to many marching bands.
+                    </Accordian>
+                    <Accordian image={Trumpet} title="Trumpet">
+                        A very famous marching band instrument, the trumpet's simple appearance is appealing, but also deceiving. Be prepared to learn a lot about embouchure before you can master this instrument.
+                    </Accordian>
+                    <Accordian image={Clarinet} title="Clarinet">
+                        The clarinet is a sleek and beautiful instrument that is the core of many concert bands. Its interface lends it great opportunity for skill expression.
+                    </Accordian>
                 </div>
             </div>
         </MUPage >
