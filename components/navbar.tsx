@@ -99,8 +99,8 @@ export default function MUNavbar() {
     return (
         <div>
             <nav className="flex bg-white">
-                <div className="ml-10 flex items-center grow">
-                    <a href='/'><span className='font-bold hover:text-sky-300 text-2xl transition-all duration-500'>Music Unbounded</span></a>
+                <div className="pl-6 flex items-center grow">
+                    <a href='/'><span className='font-bold hover:text-sky-300 text-lg lg:text-2xl transition-all duration-500'>Music Unbounded</span></a>
                 </div>
                 <div className="hidden justify-end lg:flex lg:basis-1/3 basis-0">
                     {nav_options.map((opt, i) => {
