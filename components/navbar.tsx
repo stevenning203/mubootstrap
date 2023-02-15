@@ -57,13 +57,13 @@ function NavDropdown(props: { children: React.ReactNode, title: string }) {
  */
 export const MobileHamburgerOptions = () => {
     return (
-        <div className='absolute right-5 bg-slate-700 rounded-lg bg-opacity-90 w-auto p-2'>
+        <div className='absolute right-5 bg-slate-700 rounded-lg bg-opacity-90 w-auto p-2 flex-col'>
             {nav_options.map((opt, i) => {
                 return (
                     <div className='last:pb-5'>
                         {opt.children.map((child) => {
                             return (
-                                <div key={child.dest} className='container'>
+                                <div key={child.dest} className='container w-56 hover:bg-slate-800 rounded-lg'>
                                     <a href={child.dest} className='text-sm text-white'>{child.label}</a>
                                 </div>
                             )
@@ -90,7 +90,7 @@ export const MobileHamburgerMenu = () => {
             <div className='icon'>
                 <RxHamburgerMenu onClick={showMenu}className='relative right-0'/>
             </div>
-            <div className={open ? 'fixed translate-x-100 transition-all top-15 ' : 'fixed translate-x-52 top-15 transition-all'}>
+            <div className={open ? 'fixed translate-x-80 transition-all top-15 right-0' : 'fixed top-15 right-0 transition-all'}>
                 <MobileHamburgerOptions />
             </div>
         </div>
