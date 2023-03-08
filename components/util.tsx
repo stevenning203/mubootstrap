@@ -56,7 +56,7 @@ export function Quadrant(props: { children: React.ReactNode, title: string, bg?:
     return (
         <div className={props.bg + ' text-center flex-1'}>
             <h2 className='font-lato p-10 text-5xl'>{props.title}</h2>
-            <div className='mx-5 text-lg'>{props.children}</div>
+            <div className='mx-5 py-10 text-lg'>{props.children}</div>
         </div>
     )
 }
@@ -99,8 +99,10 @@ export function MediaFlexDivider() {
 
 export function Bin(props: any) {
     return (
-        <div className="ml-[10%] w-[80%] mr-[10%] md:ml-[15%] md:mr-[15%] md:w-[70%]" {...props}>
+        <div className="ml-[10%] w-[80%] mr-[10%] md:ml-[15%] md:mr-[15%] md:w-[70%]">
+            <div {...props}>
 
+            </div>
         </div>
     )
 }
