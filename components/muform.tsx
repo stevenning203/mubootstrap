@@ -74,7 +74,7 @@ export function Dropdown(props: { children: string, label: string, options: stri
                 <option value='' disabled>Select an option</option>
                 {props.options.map(s => {
                     return (
-                        <option value={s}>{s}</option>
+                        <option key={s} value={s}>{s}</option>
                     )
                 })}
             </select>

@@ -9,14 +9,13 @@ import SheetMusic from '../assets/sheet_music.jpg';
 export default function Lessons() {
     return (
         <MUPage>
-            <PageTitle>Lessons</PageTitle>
+            <PageTitle>About Our Lessons</PageTitle>
             <Bin>
-                <Bisection left={<Bisect className='justify-center items-center flex p-3 text-lg'>
-                    <div>
-                        <h2 className='text-2xl font-bold'>About our lessons</h2>
-                        A curriculum shaped for your child's creative mind</div>
+                <h2 className='text-center text-2xl'>A curriculum shaped for your child's creative mind</h2>
 
-                </Bisect>} right={<Bisect className='justify-center items-center flex'><img className='rounded-2xl' src={SheetMusic.src} /></Bisect>} />
+                <div className='flex justify-center my-10'>
+                    <img className='rounded-2xl w-4/5' src={SheetMusic.src} />
+                </div>
             </Bin>
         </MUPage>
     )

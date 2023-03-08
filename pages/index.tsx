@@ -21,10 +21,10 @@ import Clarinet from '../assets/clarinet.jpg'
 function HomeCard(props: { children: React.ReactNode, title: string }) {
     return (
         <div className='text-center w-[16rem]'>
-            <div className='bg-blue-600 rounded-t-lg py-12'>
+            <div className='bg-blue-600 rounded-t-lg py-3'>
                 <h3 className='text-3xl'>{props.title}</h3>
             </div>
-            <div className='text-lg text-black bg-white w-full rounded-b-lg px-6 py-24'>{props.children}</div>
+            <div className='text-lg text-black bg-white w-full rounded-b-lg'>{props.children}</div>
         </div>
     )
 }
@@ -47,11 +47,14 @@ ml-[5%] flex-col justify-center items-center'>
             </div>
             <div className='text-white bg-blue-800 justify-center min-h-screen pb-5'>
                 <h1 className='font-bold text-3xl lg:text-5xl text-center p-5 break-all'>Join our ever-growing community of volunteers, young students, and teachers.</h1>
-                <div className='flex flex-wrap mx-16 p-5 mb-5 rounded-lg gap-10 justify-center'>
-                    <HomeCard title="Volunteer">Help us run our events</HomeCard>
-                    <HomeCard title="Register">Become a student</HomeCard>
-                    <HomeCard title="Teach">Spread your love for music</HomeCard>
-                    <HomeCard title="Donate">Help Music Unbounded achieve our dreams</HomeCard>
+                <div className='flex flex-wrap mx-16 p-5 mb-5 rounded-lg gap-3 justify-center'>
+                    <Quadrant bg='bg-blue-600' title="Volunteer">Hello!</Quadrant>
+                    <MediaFlexDivider />
+                    <Quadrant bg='bg-blue-600' title="Volunteer">Hello!</Quadrant>
+                    <FlexDivider />
+                    <Quadrant bg='bg-blue-600' title="Volunteer">Hello!</Quadrant>
+                    <MediaFlexDivider />
+                    <Quadrant bg='bg-blue-600' title="Volunteer">Hello!</Quadrant>
                 </div>
             </div>
             <div className="min-h-screen lg:bg-[url('../assets/person.svg')] bg-right bg-no-repeat mb-32">
