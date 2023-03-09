@@ -97,6 +97,14 @@ export function MediaFlexDivider() {
     )
 }
 
+export function PassThrough(props: any) {
+    <div className={props.className}>
+        <div {...props}>
+
+        </div>
+    </div>
+}
+
 export function Bin(props: any) {
     return (
         <div className="ml-[10%] w-[80%] mr-[10%] md:ml-[15%] md:mr-[15%] md:w-[70%]">
