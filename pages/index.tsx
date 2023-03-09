@@ -48,13 +48,13 @@ ml-[5%] flex-col justify-center items-center'>
             <div className='text-white bg-blue-800 justify-center min-h-screen pb-5'>
                 <h1 className='font-bold text-3xl lg:text-5xl text-center p-5 break-all'>Join our ever-growing community of volunteers, young students, and teachers.</h1>
                 <div className='flex flex-wrap mx-16 p-5 mb-5 rounded-lg gap-3 justify-center'>
-                    <Quadrant bg='bg-blue-600' title="Volunteer">Hello!</Quadrant>
+                    <Quadrant bg='bg-slate-800' title="Volunteer">Helo</Quadrant>
                     <MediaFlexDivider />
-                    <Quadrant bg='bg-blue-600' title="Volunteer">Hello!</Quadrant>
+                    <Quadrant bg='bg-slate-800' title="Register">Hello!</Quadrant>
                     <FlexDivider />
-                    <Quadrant bg='bg-blue-600' title="Volunteer">Hello!</Quadrant>
+                    <Quadrant bg='bg-slate-800' title="Donate">Hello!</Quadrant>
                     <MediaFlexDivider />
-                    <Quadrant bg='bg-blue-600' title="Volunteer">Hello!</Quadrant>
+                    <Quadrant bg='bg-slate-800' title="Volunteer">Hello!</Quadrant>
                 </div>
             </div>
             <div className="min-h-screen lg:bg-[url('../assets/person.svg')] bg-right bg-no-repeat mb-32">
