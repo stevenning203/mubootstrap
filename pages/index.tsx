@@ -4,7 +4,7 @@ import MUHeader from '../components/header'
 import Background from '../assets/bg.jpg'
 import MUPage from '../components/page'
 import { FlexDivider, MediaFlexDivider, PageTitle } from '../components/util'
-import { Quadrant } from '../components/util'
+import { Quadrant, Bin } from '../components/util'
 import Person from '../assets/person.svg'
 import Accordian from '../components/accordian'
 import Piano from '../assets/piano2.jpg'
@@ -17,6 +17,7 @@ import Cello from '../assets/cello.jpg'
 import Tuba from '../assets/tuba.jpg'
 import Trumpet from '../assets/trumpet.jpg'
 import Clarinet from '../assets/clarinet.jpg'
+import Community from '../assets/community.png'
 
 function HomeCard(props: { children: React.ReactNode, title: string }) {
     return (
@@ -45,17 +46,8 @@ ml-[5%] flex-col justify-center items-center'>
                     </form>
                 </div>
             </div>
-            <div className='text-white bg-blue-800 justify-center min-h-screen pb-5'>
-                <h1 className='font-bold text-3xl lg:text-5xl text-center p-5 break-all'>Join our ever-growing community of volunteers, young students, and teachers.</h1>
-                <div className='flex flex-wrap mx-16 p-5 mb-5 rounded-lg gap-3 justify-center'>
-                    <Quadrant bg='bg-slate-800' title="Volunteer">Helo</Quadrant>
-                    <MediaFlexDivider />
-                    <Quadrant bg='bg-slate-800' title="Register">Hello!</Quadrant>
-                    <FlexDivider />
-                    <Quadrant bg='bg-slate-800' title="Donate">Hello!</Quadrant>
-                    <MediaFlexDivider />
-                    <Quadrant bg='bg-slate-800' title="Volunteer">Hello!</Quadrant>
-                </div>
+            <div className={`text-white bg-blue-800 flex items-center justify-center min-h-screen pb-5 bg-[url('../assets/community.png')] bg-center`}>
+                <h1 className='font-bold text-5xl lg:text-7xl text-center p-5 mx-10 text-black'>Join our ever-growing community of volunteers, young students, and teachers.</h1>
             </div>
             <div className="min-h-screen lg:bg-[url('../assets/person.svg')] bg-right bg-no-repeat mb-32">
                 <PageTitle>Instruments We Teach</PageTitle>

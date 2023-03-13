@@ -2,12 +2,28 @@ import React from "react";
 import MUHeader from "../components/header";
 import MUPage from "../components/page";
 import { Quadrant, MediaFlexDivider, FlexDivider, Blurb, PageTitle, Bin } from "../components/util";
+import trio from '../assets/dalle2.png';
+
+function Stat(props: any) {
+    return (
+        <div key={props.key}>
+            <h2 className='text-center lg:text-5xl text-3xl my-3'>{props.title}</h2>
+            <div className='text-center'>{props.children}</div>
+        </div>
+    )
+}
 
 /**
  * 
  * @returns about page
  */
 export default function About() {
+    const stats = [
+        [">25", "Peak teachers"],
+        [">35", "Peak students"],
+        ["~550", "Lessons taken place"],
+        ["~17 000", "Minutes of learning"]
+    ]
     return (
         <MUPage>
             <div className=''>
@@ -24,11 +40,22 @@ export default function About() {
                     Music has many benefits, ranging from brain growth and academic success to being a creative outlet and source of entertainment. Each and every teacher, volunteer, and board member here at Music Unbounded have been positively influenced throughout their life through music. We are all very grateful to have been given this opportunity to learn, however, we recognize that the cost of learning music can be prohibitive for some and we hope to use our passion to make music accessible to everyone.
                 </Blurb>
             </Bin>
+            <Bin className='flex justify-center'>
+                <img className='lg:w-1/2 w-3/4 rounded-md' src = {trio.src} />
+            </Bin>
             <Bin className='my-10'>
                 <h1 className='text-center text-4xl my-6'>Impact</h1>
-                <ul className='list-disc text-lg'>
-                    <li>Hello</li>
-                </ul>
+                <div className='flex justify-center gap-8 my-24'>
+                    {
+                        stats.map((arr: string[], i) => {
+                            return (
+                                <Stat key={i} title={arr[0]}>
+                                    {arr[1]}
+                                </Stat>
+                            )
+                        })
+                    }
+                </div>
             </Bin>
         </MUPage>
     )
