@@ -1,27 +1,8 @@
 import { useState } from "react";
 import MUHeader from "../components/header";
 import MUPage from "../components/page";
-import { Bin, PageTitle } from "../components/util";
+import { Bin, PageTitle, Accordian } from "../components/util";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
-
-function Accordian(props: {children?: React.ReactNode, title: string}) {
-    const [open, setOpen] = useState(false);
-    
-    return (
-        <div className='p-2 mb-2'>
-            <div onClick={()=>setOpen(!open)} className='hover:bg-slate-100 transition-all duration-500 rounded-sm cursor-pointer text-lg font-bold p-3 flex'>
-                {props.title}
-                <div className='ml-auto'>{open ? <AiOutlineMinus /> : <AiOutlinePlus />}</div>
-            </div>
-            {
-                open && <div className='p-3'>
-                {props.children}
-                </div>
-            }
-            <hr />
-        </div>
-    )
-}
 
 /**
  * 

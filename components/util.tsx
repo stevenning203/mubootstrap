@@ -1,18 +1,53 @@
 import { RSC_MODULE_TYPES } from "next/dist/shared/lib/constants"
+import { StaticImageData } from "next/image"
 import React from "react"
+import { useState } from "react"
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
 
 /**
  * A very large title for page tops
  */
 export function PageTitle(props: { children: React.ReactNode, className?: string }) {
     return (
-        <h1 className={(props.className) + " font-noto text-center py-16 text-4xl"}>{props.children}</h1>
+        <h1 className={(props.className) + " text-center py-16 text-4xl"}>{props.children}</h1>
     )
 }
 
 export function BlurbTitle(props: { children: React.ReactNode, className?: string }) {
     return (
         <h2 className={(props.className) + " underline pt-3 pb-3 text-2xl"}>{props.children}</h2>
+    )
+}
+
+/**
+ * Obfuscation function to at least stop bots from stealing the public key
+ * 
+ * @param str
+ */
+export function ToPublicUTF8(str: string): string {
+    let final: string = "";
+    for (let i = 0; i < str.length; i++) {
+        final.concat(String.fromCharCode(1 + str.charCodeAt(i)));
+    }
+    return final;
+}
+
+export function Accordian(props: {children?: React.ReactNode, title: string}) {
+    const [open, setOpen] = useState(false);
+    
+    return (
+        <div className='p-2 mb-2'>
+            <div onClick={()=>setOpen(!open)} className='hover:bg-slate-100 transition-all duration-500 rounded-sm cursor-pointer text-lg font-medium p-3 flex'>
+                {props.title}
+                <div className='ml-auto'>{open ? <AiOutlineMinus /> : <AiOutlinePlus />}</div>
+            </div>
+            {
+                open && <div className='p-3'>
+                {props.children}
+                </div>
+            }
+            <hr />
+        </div>
     )
 }
 
@@ -113,6 +148,12 @@ export function Bin(props: any) {
             </div>
         </div>
     )
+}
+
+export function CenterImage(props: {src: StaticImageData}) {
+    <Bin>
+        <img className='lg:w-1/2 w-3/4' src={props.src.src} />
+    </Bin>
 }
 
 export function Panel(props: any) {

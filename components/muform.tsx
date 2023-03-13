@@ -1,7 +1,6 @@
 import React from "react";
-import { TriggerConfig } from "react-hook-form";
 import { nav_options } from "../page_data/nav_options";
-import { Bin } from "./util";
+import { Bin, ToPublicUTF8 } from "./util";
 
 /**
  * Redirect the user to the thank you page
@@ -28,11 +27,11 @@ function SubmitMUForm(e: React.FormEvent<HTMLFormElement>, url: string): void {
  * 
  * @param props children...
  */
-export default function MUForm(props: { children?: React.ReactNode, apps_script_url: string, className?: string }) {
+export default function MUForm(props: { children?: React.ReactNode, apps_script_url_OBFS: string, className?: string }) {
     return (
         <Bin>
             <div className={props.className}>
-                <form method='post' onSubmit={e => SubmitMUForm(e, props.apps_script_url)}>
+                <form method='post' onSubmit={e => SubmitMUForm(e, ToPublicUTF8(props.apps_script_url_OBFS))}>
                     {props.children}
                     <input className='bg-blue-600 text-white p-3 rounded-md' type="submit" />
                 </form>
