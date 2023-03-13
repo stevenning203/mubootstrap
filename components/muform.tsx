@@ -29,6 +29,7 @@ function SubmitMUForm(e: React.FormEvent<HTMLFormElement>, url: string): void {
  */
 export default function MUForm(props: { children?: React.ReactNode, apps_script_url_OBFS: string, className?: string }) {
     return (
+        
         <Bin>
             <div className={props.className}>
                 <form method='post' onSubmit={e => SubmitMUForm(e, ToPublicUTF8(props.apps_script_url_OBFS))}>
