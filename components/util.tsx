@@ -37,7 +37,7 @@ export function Accordian(props: {children?: React.ReactNode, title: string}) {
     
     return (
         <div className='p-2 mb-2'>
-            <div onClick={()=>setOpen(!open)} className='hover:bg-slate-100 transition-all duration-500 rounded-sm cursor-pointer text-lg font-medium p-3 flex'>
+            <div onClick={() => setOpen(!open)} className='hover:bg-slate-100 transition-all duration-500 rounded-sm cursor-pointer text-lg font-medium p-3 flex items-center'>
                 {props.title}
                 <div className='ml-auto'>{open ? <AiOutlineMinus /> : <AiOutlinePlus />}</div>
             </div>
