@@ -104,7 +104,7 @@ export default function MUNavbar() {
                 </div>
                 <div className="hidden justify-end lg:flex lg:basis-1/3 basis-0">
                     {nav_options.map((opt, i) => {
-                        return (<NavDropdown title={opt.parent_title}>
+                        return (<NavDropdown key={i} title={opt.parent_title}>
                             {opt.children.map((opt_item, i) => {
                                 return (
                                     <DropDownItem key={opt_item.dest} link={opt_item.dest}>
@@ -118,7 +118,7 @@ export default function MUNavbar() {
 
                     {single_nav_options.map((opt, i) => {
                         return (
-                            <a href={opt.dest}><MUNavItem>{opt.title}</MUNavItem></a>
+                            <a href={opt.dest} key={i}><MUNavItem>{opt.title}</MUNavItem></a>
                         )
                     })}
                     
