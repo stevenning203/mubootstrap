@@ -60,7 +60,7 @@ export const MobileHamburgerOptions = () => {
         <div className='absolute right-5 bg-slate-700 rounded-lg bg-opacity-90 w-auto p-2 flex-col'>
             {nav_options.map((opt, i) => {
                 return (
-                    <div className='last:pb-5'>
+                    <div key={opt.parent_title} className='last:pb-5'>
                         {opt.children.map((child) => {
                             return (
                                 <div key={child.dest} className='container w-56 hover:bg-slate-800 rounded-lg'>
@@ -107,12 +107,12 @@ export default function MUNavbar() {
     return (
         <div>
             <nav className="flex bg-white">
-                <div className="ml-10 flex items-center grow">
-                    <a href='/'><span className='font-bold hover:text-sky-300 text-2xl transition-all duration-500'>Music Unbounded</span></a>
+                <div className="pl-6 flex items-center grow">
+                    <a href='/'><span className='font-bold hover:text-sky-300 text-lg lg:text-2xl transition-all duration-500'>Music Unbounded</span></a>
                 </div>
                 <div className="hidden justify-end lg:flex lg:basis-1/3 basis-0">
                     {nav_options.map((opt, i) => {
-                        return (<NavDropdown title={opt.parent_title}>
+                        return (<NavDropdown key={i} title={opt.parent_title}>
                             {opt.children.map((opt_item, i) => {
                                 return (
                                     <DropDownItem key={opt_item.dest} link={opt_item.dest}>
@@ -126,7 +126,7 @@ export default function MUNavbar() {
 
                     {single_nav_options.map((opt, i) => {
                         return (
-                            <MUNavItem><a href={opt.dest}>{opt.title}</a></MUNavItem>
+                            <a href={opt.dest} key={i}><MUNavItem>{opt.title}</MUNavItem></a>
                         )
                     })}
                     
