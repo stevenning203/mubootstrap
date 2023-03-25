@@ -9,7 +9,7 @@ import { EmailField, Field, Dropdown, PhoneField } from "../components/muform";
  * @returns teach page
  */
 export default function Teach() {
-    const webapp_url: string = "";
+    const webapp_url: string = "kwwsv=22vfulsw1jrrjoh1frp2pdfurv2v2DNi|fe}Q7k0dQWM4IrYIV3KJvWKQK\\jRK6ERp3Qg\\:<:xMIPU8o<Y0Z}|FkfJ4;8j0Q<Pr;2h{hf";
 
     const type_options: string[] = [
         "Fundraising",
@@ -69,9 +69,9 @@ export default function Teach() {
             <PageTitle>Fill out this form</PageTitle>
 
             <MUForm className='mb-5 mt-10' apps_script_url={webapp_url}>
-                <Field required={true} name="Name">Name</Field>
+                <Field required={true} name="Teacher Name">Name</Field>
                 <EmailField />
-                <Dropdown label="Adult" options={["Yes", "No"]}>Are you 18 years of age or older?</Dropdown>
+                <Dropdown label="Age" options={["At least 16", "Under 16"]}>Are you 16 years of age or older?</Dropdown>
                 <PhoneField />
                 <Dropdown label="Instrument" options={instrument_options}>Instrument</Dropdown>
             </MUForm>

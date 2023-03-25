@@ -21,7 +21,7 @@ function SubmitMUForm(e: React.FormEvent<HTMLFormElement>, url: string, form: an
     e.preventDefault();
 
     fetch(url, { method: "POST", body: new FormData(form) })
-        .then(response => RedirectToThankYou()).catch();
+        .then(response => RedirectToThankYou(), reason => alert("Failed, internal error. Please email us at support@musicunbounded.org with details.")).catch();
 }
 
 /**
@@ -37,7 +37,11 @@ export default function MUForm(props: { children?: React.ReactNode, apps_script_
         if (submit_disabled) {
             return;
         }
+        SetSubmitDisabled(true);
+        SetSubmitButtonName("Submitting...")
         SubmitMUForm(e, url, document.forms["main_form"]);
+        SetSubmitDisabled(false);
+        SetSubmitButtonName("Submit")
     }
 
     return (

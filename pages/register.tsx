@@ -8,7 +8,7 @@ import { BlueWideDiv, Blurb, PageTitle } from "../components/util";
  * @returns register page
  */
 export default function Register() {
-    const webapp_url: string = "";
+    const hashed: string = "kwwsv=22vfulsw1jrrjoh1frp2pdfurv2v2DNi|feziTsqQSjIjZ{xtmUZTyOu:S]IE:F5NhbEpQwQl;}g4hdfNykStvbl30wEzUwx}3vdyiz2h{hf";
 
     const instrument_options: string[] = [
         "Piano",
@@ -34,7 +34,7 @@ export default function Register() {
                 <PageTitle className="text-white">Register</PageTitle>
             </BlueWideDiv>
 
-            <MUForm className='mb-5 mt-10' apps_script_url={webapp_url}>
+            <MUForm className='mb-5 mt-10' apps_script_url={hashed}>
                 <Field required={true} name="Guardian Full Name">Guardian Full Name</Field>
                 <Field required={true} name="Student Full Name">Student Full Name</Field>
                 <EmailField />

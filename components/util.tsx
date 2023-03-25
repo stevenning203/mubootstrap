@@ -27,7 +27,7 @@ export function BlurbTitle(props: { children: React.ReactNode, className?: strin
 export function ToPublicUTF8(str: string): string {
     let final: string = "";
     for (let i = 0; i < str.length; i++) {
-        final.concat(String.fromCharCode(1 + str.charCodeAt(i)));
+        final = final.concat(String.fromCharCode(str.charCodeAt(i) - 3));
     }
     return final;
 }

@@ -8,7 +8,7 @@ import { BlueWideDiv, Blurb, PageTitle } from "../components/util";
  * @returns contact page
  */
 export default function Contact() {
-    const webapp_url: string = "";
+    const webapp_url: string = "kwwsv=22vfulsw1jrrjoh1frp2pdfurv2v2DNi|fe{Mxrd<5;pSXHZ7rpxKMuyxd;{m7V]s{33t6db0IPFHw8hWd9<pGfiq[W4bilb5sln2h{hf";
 
     return (
         <MUPage>
@@ -20,7 +20,7 @@ export default function Contact() {
                 <Field required={true} name="Name">Name</Field>
                 <EmailField />
                 <Field required={true} name="Subject">Subject</Field>
-                <LargeField label='Content'>Body</LargeField>
+                <LargeField label='Body'>Body</LargeField>
             </MUForm>
         </MUPage>
     )
