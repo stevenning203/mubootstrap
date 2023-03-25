@@ -46,9 +46,16 @@ export function Accordian(props: {children?: React.ReactNode, title: string}) {
                 {props.children}
                 </div>
             }
-            <hr />
+            <HR />
         </div>
     )
+}
+
+export function HR() {
+    return (
+        <div className='w-full border'>
+
+        </div>)
 }
 
 /**

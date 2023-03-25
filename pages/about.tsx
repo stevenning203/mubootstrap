@@ -41,17 +41,20 @@ export default function About() {
                 </Blurb>
             </Bin>
             <Bin className='flex justify-center'>
-                <img className='lg:w-1/2 w-3/4 rounded-md' src = {trio.src} />
+                <img className='lg:w-1/2 w-3/4 rounded-md' src={trio.src} />
             </Bin>
             <Bin className='my-10'>
                 <h1 className='text-center text-4xl my-6'>Impact</h1>
-                <div className='flex justify-center gap-8 my-24'>
+                <div className='flex justify-center gap-8 my-24 mx-8 flex-wrap'>
                     {
                         stats.map((arr: string[], i) => {
                             return (
-                                <Stat key={i} title={arr[0]}>
-                                    {arr[1]}
-                                </Stat>
+                                <div key={i}>
+                                    <Stat title={arr[0]}>
+                                        {arr[1]}
+                                    </Stat>
+                                </div>
+
                             )
                         })
                     }

@@ -3,7 +3,7 @@ import Logo from '../assets/logo.png';
 import React, { useState } from "react";
 import useComponentVisible from '../logic/use_component_visible';
 import { nav_options, single_nav_options } from '../page_data/nav_options';
-import { RxHamburgerMenu } from 'react-icons/rx'
+import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx'
 
 /**
  * 
@@ -57,20 +57,25 @@ function NavDropdown(props: { children: React.ReactNode, title: string }) {
  */
 export const MobileHamburgerOptions = () => {
     return (
-        <div className='absolute right-5 bg-slate-700 rounded-lg bg-opacity-90 w-auto p-2 flex-col'>
-            {nav_options.map((opt, i) => {
-                return (
-                    <div key={opt.parent_title} className='last:pb-5'>
-                        {opt.children.map((child) => {
-                            return (
-                                <div key={child.dest} className='container w-56 hover:bg-slate-800 rounded-lg'>
-                                    <a href={child.dest} className='text-sm text-white'>{child.label}</a>
-                                </div>
-                            )
-                        }) }
-                    </div>
-                )
-            })}
+        <div className='fixed z-40 h-screen right-0 bg-white w-[100%] pt-10'>
+            <div className=''>
+                {nav_options.map((opt, i) => {
+                    return (
+                        <div key={opt.parent_title}>
+                            <h2 className='text-lg pl-6 text-gray-400'>{opt.parent_title}</h2>
+                            <div key={opt.parent_title} className='last:pb-5'>
+                                {opt.children.map((child) => {
+                                    return (
+                                        <div key={child.dest} className='transition-all duration-500 rounded-lg'>
+                                            <a href={child.dest} className='text-lg pl-6'>{child.label}</a>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }
@@ -87,10 +92,11 @@ export const MobileHamburgerMenu = () => {
 
     return (
         <div className="mobile-nav">
-            <div className='icon'>
-                <RxHamburgerMenu onClick={showMenu}className='relative right-0'/>
+            <div className='icon z-50 relative'>
+                {open ? <RxCross1 className='relative right-0 cursor-pointer' onClick={() => {setOpen(false)}}  /> : <RxHamburgerMenu onClick={showMenu} className='relative right-0 cursor-pointer'/>}
+                
             </div>
-            <div className={open ? 'fixed translate-x-80 transition-all top-15 right-0' : 'fixed top-15 right-0 transition-all'}>
+            <div className={open ? 'duration-500 fixed left-0 transition-all right-0' : 'translate-x-[100vw] left-0 duration-500 fixed right-0 transition-all'}>
                 <MobileHamburgerOptions />
             </div>
         </div>
@@ -106,6 +112,7 @@ export const MobileHamburgerMenu = () => {
 export default function MUNavbar() {
     return (
         <div>
+<div className='fixed top-0 left-0 right-0 lg:relative'>
             <nav className="flex bg-white">
                 <div className="pl-6 flex items-center grow">
                     <a href='/'><span className='font-bold hover:text-sky-300 text-lg lg:text-2xl transition-all duration-500'>Music Unbounded</span></a>
@@ -132,11 +139,13 @@ export default function MUNavbar() {
                     
                 </div>
                 <div className="flex lg:hidden basis:1">
-                    <div className="cursor-pointer lg:hidden text-5xl mr-5 py-3">
+                    <div className="lg:hidden text-5xl mr-5 py-3">
                         <MobileHamburgerMenu />
                     </div>
                 </div>
             </nav>
+        </div>
+            <div className='mr-5 py-3 lg:hidden'></div>
         </div>
     )
 }

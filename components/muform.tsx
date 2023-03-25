@@ -1,6 +1,7 @@
 import React from "react";
 import { nav_options } from "../page_data/nav_options";
 import { Bin, ToPublicUTF8 } from "./util";
+import { useState } from "react";
 
 /**
  * Redirect the user to the thank you page
@@ -16,23 +17,34 @@ function RedirectToThankYou(): void {
  * @param url url of the webapp url script
  * @param form the html form
  */
-function SubmitMUForm(e: React.FormEvent<HTMLFormElement>, url: string): void {
+function SubmitMUForm(e: React.FormEvent<HTMLFormElement>, url: string, form: any): void {
     e.preventDefault();
 
-    // fetch(url, { method: "POST", body: new FormData(form) })
-    //     .then(response => RedirectToThankYou()).catch();
+    fetch(url, { method: "POST", body: new FormData(form) })
+        .then(response => RedirectToThankYou()).catch();
 }
 
 /**
  * 
  * @param props children...
  */
-export default function MUForm(props: { children?: React.ReactNode, apps_script_url_OBFS: string, className?: string }) {
+export default function MUForm(props: { children?: React.ReactNode, apps_script_url: string, className?: string }) {
+    const [submit_disabled, SetSubmitDisabled] = useState(false);
+    const [submit_button_name, SetSubmitButtonName] = useState("Submit");
+
+    function AttemptSubmission(e: React.FormEvent<HTMLFormElement>, url: string): void {
+        e.preventDefault();
+        if (submit_disabled) {
+            return;
+        }
+        SubmitMUForm(e, url, document.forms["main_form"]);
+    }
+
     return (
         
         <Bin>
             <div className={props.className}>
-                <form method='post' onSubmit={e => SubmitMUForm(e, ToPublicUTF8(props.apps_script_url_OBFS))}>
+                <form name="main_form" method='post' onSubmit={e => AttemptSubmission(e, ToPublicUTF8(props.apps_script_url))}>
                     {props.children}
                     <input className='bg-blue-600 text-white p-3 rounded-md' type="submit" />
                 </form>
