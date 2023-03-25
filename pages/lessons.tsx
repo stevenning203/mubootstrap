@@ -1,5 +1,5 @@
 import MUPage from "../components/page";
-import { Bin, Bisection, Bisect, PageTitle, Accordian } from "../components/util";
+import { Bin, Bisection, Bisect, PageTitle, Accordian, HR } from "../components/util";
 import SheetMusic from '../assets/sheet_music.jpg';
 
 /**
@@ -26,7 +26,7 @@ export default function Lessons() {
                     <img className='rounded-2xl w-4/5' src={SheetMusic.src} />
                 </div>
             </Bin>
-            <hr />
+            <HR />
             <Bin className='my-24'>
                 {vals.map(
                     (element, i)=>{

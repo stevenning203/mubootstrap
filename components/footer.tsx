@@ -11,9 +11,9 @@ function FooterTitle(props: { children: ReactNode }) {
     )
 }
 
-function FooterColumn(props: { children: ReactNode }) {
+function FooterColumn(props: { children: ReactNode, className?: string }) {
     return (
-        <div>
+        <div className={props.className}>
             {props.children}
         </div>
     )
@@ -29,28 +29,31 @@ function FooterLink(props: { title: string, dest: string }) {
 
 export default function Footer() {
     return (
-        <footer className='pl-[10%] pr-[10%] bg-blue-800 text-sky-300'>
+        <footer className='pl-[10%] pr-[10%] bg-blue-800 text-sky-200'>
             <div className='pt-10 pb-10 flex gap-4 flex-wrap'>
             <FooterColumn>
                 <FooterTitle>About Us</FooterTitle>
                 <FooterLink title='About' dest='/about' />
                 <FooterLink title='Our Lessons' dest='/lessons' />
                 <FooterLink title='Meet the Team' dest='/our-team' />
+                <FooterLink title="FAQ" dest='/faq' />
             </FooterColumn>
             <FooterColumn>
                 <FooterTitle>Get Involved</FooterTitle>
                 <FooterLink title='Apply to be a Volunteer' dest='/volunteer' />
                 <FooterLink title='Become one of our Teachers' dest='/teach' />
+                <FooterLink title='Contact' dest='/contact' />
             </FooterColumn>
             <FooterColumn>
                 <FooterTitle>Register</FooterTitle>
                 <FooterLink title='Register for Lessons' dest='/register' />
             </FooterColumn>
-            <FooterColumn>
+            <FooterColumn className='flex gap-4'>
                 <form action='/contact'>
                     <button className='text-lg py-2 px-3 rounded-lg bg-[#3399ff] text-white'>Contact Us</button>
-                    </form>
-                </FooterColumn>
+                </form>
+                <a><button className='text-lg py-2 px-4 rounded-lg bg-slate-600 text-white'>Donate</button></a>
+            </FooterColumn>
             </div>
             <div className='flex flex-wrap gap-3 pb-3'>
                 <a href='http://www.facebook.com/MusicUnbounded.nonprofit/'>

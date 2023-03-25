@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import useComponentVisible from '../logic/use_component_visible';
 import { nav_options, single_nav_options } from '../page_data/nav_options';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx'
+import { HR } from './util';
 
 /**
  * 
@@ -12,7 +13,7 @@ import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx'
  */
 function MUNavItem(props: { children: React.ReactNode }) {
     return (
-        <div className='rounded text-lg py-4 pr-5 pl-5 hover:bg-gray-200 duration-500 transition'>
+        <div className='rounded text-lg py-4 pr-5 pl-5 hover:bg-gray-200 duration-500 transition whitespace-nowrap'>
             {props.children}
         </div>
     )
@@ -26,7 +27,7 @@ function MUNavItem(props: { children: React.ReactNode }) {
 function DropDownItem(props: { children: React.ReactNode, link: string }) {
     return (
         <div className='relative text-center'>
-            <a href={props.link}><div className='p-3 hover:bg-gray-100 rounded-md'>{props.children}</div></a>
+            <a href={props.link}><div className='p-3 hover:bg-gray-100 rounded-md whitespace-nowrap'>{props.children}</div></a>
         </div>
     )
 }
@@ -63,6 +64,7 @@ export const MobileHamburgerOptions = () => {
                     return (
                         <div key={opt.parent_title}>
                             <h2 className='text-lg pl-6 text-gray-400'>{opt.parent_title}</h2>
+                            <HR />
                             <div key={opt.parent_title} className='last:pb-5'>
                                 {opt.children.map((child) => {
                                     return (
@@ -72,6 +74,15 @@ export const MobileHamburgerOptions = () => {
                                     )
                                 })}
                             </div>
+                        </div>
+                    )
+                })}
+            </div>
+            <div className='flex flex-wrap flex-col pl-6 py-2 gap-4'>
+                {single_nav_options.map((opt, i) => {
+                    return (
+                        <div className='text-lg last:pb-6' key = {opt.dest}>
+                            <a href = {opt.dest}><button className='text-white rounded-md bg-blue-600 px-3 py-2.5'>{opt.title}</button></a>
                         </div>
                     )
                 })}
@@ -145,7 +156,7 @@ export default function MUNavbar() {
                 </div>
             </nav>
         </div>
-            <div className='mr-5 py-3 lg:hidden'></div>
+            <div className='mr-5 my-20 lg:hidden'></div>
         </div>
     )
 }

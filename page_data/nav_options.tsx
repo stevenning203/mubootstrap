@@ -7,9 +7,9 @@ export const nav_options: { parent_title: string, children: { label: string, des
             {
                 label: "Our Lessons", dest: "/lessons"
             },
-            {
-                label: "Programs", dest: "/programs"
-            },
+            // {
+            //     label: "Programs", dest: "/programs"
+            // },
             {
                 label: "Our Team", dest: "our-team"
             },
@@ -26,11 +26,11 @@ export const nav_options: { parent_title: string, children: { label: string, des
                 label: "Teach", dest: "/teach"
             },
             {
-                label: "Donate", dest: "/donate"
+                label: "Contact", dest: "/contact"
             },
-            {
-                label: "Work with Us", dest: "/partner"
-            }
+            // {
+            //     label: "Work with Us", dest: "/partner"
+            // }
         ]
     },
 ];
@@ -41,7 +41,7 @@ export const single_nav_options: { title: string, dest: string }[] = [
         title: "Register", dest: "/register"
     },
     {
-        title: "Contact", dest: "/contact"
+        title: "Donate", dest: "/donate"
     },
     {
         title: "Store", dest: "http://music-unbounded.creator-spring.com/"
