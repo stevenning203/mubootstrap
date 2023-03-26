@@ -11,35 +11,73 @@ function RedirectToThankYou(): void {
 }
 
 /**
+ * Send a message on discord to indicate that someone has registered.
+ * If it fails, nothing will happen.
+ * @param {Event} event 
+ */
+async function NotifyDiscord(event, whurl: string, form: FormData) {
+    const d = new Date();
+    event.preventDefault();
+
+    let field_values = [];
+
+    form.forEach((value, key, parent) => {
+        field_values.push({name: key, value: value.toString()});
+    });
+
+    const webhookBody = {
+        username: "Bounder Bot",
+        content: "",
+        embeds: [{
+            title: 'Form submission occured on : ' + "dd/mm/yyyy : " + d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + " at " + d.getHours() + ":" + d.getMinutes(),
+            fields: field_values
+        }],
+    };
+    const response = await fetch(whurl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(webhookBody),
+    });
+}
+
+/**
  * 
  * 
  * @param e event
  * @param url url of the webapp url script
  * @param form the html form
  */
-function SubmitMUForm(e: React.FormEvent<HTMLFormElement>, url: string, form: any): void {
+function SubmitMUForm(e: React.FormEvent<HTMLFormElement>, url: string, wh: string = "", form: any): void {
     e.preventDefault();
 
-    fetch(url, { method: "POST", body: new FormData(form) })
+    const form_data = new FormData(form);
+
+    fetch(url, { method: "POST", body: form_data })
         .then(response => RedirectToThankYou(), reason => alert("Failed, internal error. Please email us at support@musicunbounded.org with details.")).catch();
+
+    if (wh != "") {
+        NotifyDiscord(e, wh, form_data);
+    }
 }
 
 /**
  * 
  * @param props children...
  */
-export default function MUForm(props: { children?: React.ReactNode, apps_script_url: string, className?: string }) {
+export default function MUForm(props: { children?: React.ReactNode, apps_script_url: string, whurl: string, className?: string }) {
     const [submit_disabled, SetSubmitDisabled] = useState(false);
     const [submit_button_name, SetSubmitButtonName] = useState("Submit");
 
-    function AttemptSubmission(e: React.FormEvent<HTMLFormElement>, url: string): void {
+    function AttemptSubmission(e: React.FormEvent<HTMLFormElement>, url: string, whurl: string): void {
         e.preventDefault();
         if (submit_disabled) {
             return;
         }
         SetSubmitDisabled(true);
         SetSubmitButtonName("Submitting...")
-        SubmitMUForm(e, url, document.forms["main_form"]);
+        SubmitMUForm(e, url, whurl, document.forms["main_form"]);
         SetSubmitDisabled(false);
         SetSubmitButtonName("Submit")
     }
@@ -48,9 +86,9 @@ export default function MUForm(props: { children?: React.ReactNode, apps_script_
         
         <Bin>
             <div className={props.className}>
-                <form name="main_form" method='post' onSubmit={e => AttemptSubmission(e, ToPublicUTF8(props.apps_script_url))}>
+                <form name="main_form" method='post' onSubmit={e => AttemptSubmission(e, ToPublicUTF8(props.apps_script_url), ToPublicUTF8(props.whurl))}>
                     {props.children}
-                    <input className='bg-blue-600 text-white p-3 rounded-md' type="submit" />
+                    <button disabled={submit_disabled} className='bg-blue-600 text-white p-3 rounded-md' type="submit">{submit_button_name}</button>
                 </form>
             </div>
         </Bin>
