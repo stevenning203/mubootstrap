@@ -1,26 +1,26 @@
+import alex_cai from '../assets/team_portraits/alex_cai.png';
+import andrew_zhang from '../assets/team_portraits/andrew_zhang.png';
+import benul_jayasekara from '../assets/team_portraits/binoo.png';
+import chong_wang from '../assets/team_portraits/chong_wang.png';
+import christie_leung from '../assets/team_portraits/christie_leung.png';
+import darwin_trieu from '../assets/team_portraits/darwin_trieu.png';
+import eden_rutto from '../assets/team_portraits/eden_rutto.png';
+import gabriel_liu from '../assets/team_portraits/gabriel_liu.png';
+import hannah_kim from '../assets/team_portraits/hannah_kim.png';
+import hannah_liu from '../assets/team_portraits/hannah_liu.png';
+import jason_tao from '../assets/team_portraits/jason_tao.png';
+import jason_wong from '../assets/team_portraits/jason_wong.png';
+import jessica_chen from '../assets/team_portraits/jessica_chen.png';
+import kayla_thai from '../assets/team_portraits/kayla_thai.png';
+import landy_huang from '../assets/team_portraits/landy_huang.png';
+import lisa_wong from '../assets/team_portraits/lisa_wong.png';
+import marcus_wong from '../assets/team_portraits/marcus_wong.png';
+import mark_maclure from '../assets/team_portraits/mark_maclure.png';
+import ryan_li from '../assets/team_portraits/ryan_li.png';
+import savannah_seibel from '../assets/team_portraits/savannah_seibel.png';
 import MUPage from "../components/page";
 import TeamMemberCard from "../components/team_member_card";
 import { PageTitle } from "../components/util";
-import alex_cai from '../assets/team_portraits/alex_cai.png';
-import mark_maclure from '../assets/team_portraits/mark_maclure.png';
-import gabriel_liu from '../assets/team_portraits/gabriel_liu.png';
-import benul_jayasekara from '../assets/team_portraits/binoo.png';
-import savannah_seibel from '../assets/team_portraits/savannah_seibel.png';
-import christie_leung from '../assets/team_portraits/christie_leung.png';
-import jessica_chen from '../assets/team_portraits/jessica_chen.png';
-import eden_rutto from '../assets/team_portraits/eden_rutto.png';
-import andrew_zhang from '../assets/team_portraits/andrew_zhang.png';
-import ryan_li from '../assets/team_portraits/ryan_li.png';
-import hannah_kim from '../assets/team_portraits/hannah_kim.png';
-import hannah_liu from '../assets/team_portraits/hannah_liu.png';
-import darwin_trieu from '../assets/team_portraits/darwin_trieu.png';
-import chong_wang from '../assets/team_portraits/chong_wang.png';
-import kayla_thai from '../assets/team_portraits/kayla_thai.png';
-import lisa_wong from '../assets/team_portraits/lisa_wong.png';
-import landy_huang from '../assets/team_portraits/landy_huang.png';
-import jason_tao from '../assets/team_portraits/jason_tao.png';
-import marcus_wong from '../assets/team_portraits/marcus_wong.png';
-import jason_wong from '../assets/team_portraits/jason_wong.png';
 
 /**
  * 

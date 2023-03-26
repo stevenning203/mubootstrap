@@ -1,6 +1,6 @@
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import { StaticImageData } from "next/image";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 export default function Accordian(props: { title: string, children: string, className?: string, image: StaticImageData }) {
     const [open, setOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function Accordian(props: { title: string, children: string, clas
 
             </div>
             {open && <div className='p-3 border rounded-b-lg bg-white text-black'>
-                <img className='w-1/3 mx-auto my-10 rounded-lg' src={props.image.src} />
+                <Image alt="Accordian Image" className='w-1/3 mx-auto my-10 rounded-lg' src={props.image.src} />
                 <div className='w-2/3 mx-auto text-center'>{props.children}</div>
             </div>}
         </div>

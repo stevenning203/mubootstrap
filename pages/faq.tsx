@@ -1,8 +1,6 @@
 import { useState } from "react";
-import MUHeader from "../components/header";
 import MUPage from "../components/page";
-import { Bin, PageTitle, Accordian } from "../components/util";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
+import { Accordian, Bin, PageTitle } from "../components/util";
 
 /**
  * 

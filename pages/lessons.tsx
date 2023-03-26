@@ -1,6 +1,7 @@
-import MUPage from "../components/page";
-import { Bin, Bisection, Bisect, PageTitle, Accordian, HR } from "../components/util";
+import Image from "next/image";
 import SheetMusic from '../assets/sheet_music.jpg';
+import MUPage from "../components/page";
+import { Accordian, Bin, HR, PageTitle } from "../components/util";
 
 /**
  * 
@@ -23,7 +24,7 @@ export default function Lessons() {
                 <h2 className='text-center text-2xl'>A curriculum shaped for your child&apos;s creative mind</h2>
 
                 <div className='flex justify-center my-10'>
-                    <img className='rounded-2xl w-4/5' src={SheetMusic.src} />
+                    <Image width={10} height={10} alt="Sheet Music" className='rounded-2xl w-4/5' src={SheetMusic.src} />
                 </div>
             </Bin>
             <HR />

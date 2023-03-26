@@ -1,7 +1,5 @@
-import React from "react";
-import { nav_options } from "../page_data/nav_options";
+import React, { useState } from "react";
 import { Bin, ToPublicUTF8 } from "./util";
-import { useState } from "react";
 
 /**
  * Redirect the user to the thank you page
