@@ -1,34 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import MUHeader from '../components/header'
-import Background from '../assets/bg.jpg'
-import MUPage from '../components/page'
-import { FlexDivider, MediaFlexDivider, PageTitle } from '../components/util'
-import { Quadrant, Bin } from '../components/util'
-import Person from '../assets/person.svg'
-import Accordian from '../components/accordian'
-import Piano from '../assets/piano2.jpg'
-import Flute from '../assets/flute.jpeg'
-import Violin from '../assets/violin.jpg'
-import Trombone from '../assets/trombone.jpg'
-import Viola from '../assets/viola.jpg'
-import Guitar from '../assets/guitar.jpg'
 import Cello from '../assets/cello.jpg'
-import Tuba from '../assets/tuba.jpg'
-import Trumpet from '../assets/trumpet.jpg'
 import Clarinet from '../assets/clarinet.jpg'
 import Community from '../assets/community.png'
-
-function HomeCard(props: { children: React.ReactNode, title: string }) {
-    return (
-        <div className='text-center w-[16rem]'>
-            <div className='bg-blue-600 rounded-t-lg py-3'>
-                <h3 className='text-3xl'>{props.title}</h3>
-            </div>
-            <div className='text-lg text-black bg-white w-full rounded-b-lg'>{props.children}</div>
-        </div>
-    )
-}
+import Flute from '../assets/flute.jpeg'
+import Guitar from '../assets/guitar.jpg'
+import Person from '../assets/person.svg'
+import Background from '../assets/piano.png'
+import Piano from '../assets/piano2.jpg'
+import Trombone from '../assets/trombone.jpg'
+import Trumpet from '../assets/trumpet.jpg'
+import Tuba from '../assets/tuba.jpg'
+import Viola from '../assets/viola.jpg'
+import Violin from '../assets/violin.jpg'
+import Accordian from '../components/accordian'
+import MUPage from '../components/page'
+import { PageTitle } from '../components/util'
 
 /**
  * 
@@ -37,7 +22,7 @@ function HomeCard(props: { children: React.ReactNode, title: string }) {
 export default function Home() {
     return (
         <MUPage>
-            <div className="bg-[url('../assets/piano.png')] bg-no-repeat bg-cover bg-center flex h-screen">
+            <div style={{backgroundImage:`url(${Background.src})`}} className="bg-no-repeat bg-cover bg-center flex h-screen">
                 <div className='mt-[40%] lg:mt-[12%] md:mt-[25%] sm:mt-[35%]
 ml-[5%] flex-col justify-center items-center'>
                     <h1 className='w-full text-white font-lighter text-left text-4xl lg:text-7xl md:text-5xl font-lato tracking-[.02em] leading-tight  pb-[30px]'>Making Music Possible, <br /> for Every Child</h1>
@@ -46,10 +31,10 @@ ml-[5%] flex-col justify-center items-center'>
                     </form>
                 </div>
             </div>
-            <div className={`text-white bg-blue-800 flex items-center justify-center min-h-screen pb-5 bg-[url('../assets/community.png')] bg-center`}>
+            <div style={{backgroundImage:`url(${Community.src})`}} className={`text-white bg-blue-800 flex items-center justify-center min-h-screen pb-5 bg-center`}>
                 <h1 className='font-bold text-5xl lg:text-7xl text-center p-5 mx-10 text-black'>Join our ever-growing community of volunteers, young students, and teachers.</h1>
             </div>
-            <div className="min-h-screen lg:bg-[url('../assets/person.svg')] bg-right bg-no-repeat mb-32">
+            <div style={{backgroundImage:`url(${Person.src})`}} className="min-h-screen bg-right bg-no-repeat mb-32">
                 <PageTitle>Instruments We Teach</PageTitle>
                 <div className='w-[60%] mx-auto flex-col flex gap-2'>
                     <Accordian image={Piano} title="Piano">

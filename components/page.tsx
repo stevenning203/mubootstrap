@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import MUHeader from "./header";
+import { ReactNode } from "react";
 import Footer from "./footer";
+import MUHeader from "./header";
 
 /**
  * Provides the header and footer for an page on Music Unbounded

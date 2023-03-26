@@ -1,8 +1,7 @@
-import React from "react";
-import MUHeader from "../components/header";
-import MUPage from "../components/page";
-import { Quadrant, MediaFlexDivider, FlexDivider, Blurb, PageTitle, Bin } from "../components/util";
+import Image from "next/image";
 import trio from '../assets/dalle2.png';
+import MUPage from "../components/page";
+import { Bin, Blurb, PageTitle } from "../components/util";
 
 function Stat(props: any) {
     return (
@@ -41,7 +40,7 @@ export default function About() {
                 </Blurb>
             </Bin>
             <Bin className='flex justify-center'>
-                <img className='lg:w-1/2 w-3/4 rounded-md' src={trio.src} />
+                <Image width={10} height={10} alt="About Image" className='lg:w-1/2 w-3/4 rounded-md' src={trio.src} />
             </Bin>
             <Bin className='my-10'>
                 <h1 className='text-center text-4xl my-6'>Impact</h1>

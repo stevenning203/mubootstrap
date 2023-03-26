@@ -1,7 +1,6 @@
-import { ReactNode } from "react"
-// import facebook_icon from '../assets/facebook_logo.png';
-// import instagram_icon from '../assets/instagram_logo.png';
-import {FaInstagram, FaFacebook} from 'react-icons/fa'; 
+import { ReactNode } from "react";
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { InternalLink } from "./util";
 
 function FooterTitle(props: { children: ReactNode }) {
     return (
@@ -22,7 +21,7 @@ function FooterColumn(props: { children: ReactNode, className?: string }) {
 function FooterLink(props: { title: string, dest: string }) {
     return (
         <div>
-            <a href={props.dest}>{props.title}</a>
+            <InternalLink href={props.dest}>{props.title}</InternalLink>
         </div>
     )
 }
@@ -52,7 +51,7 @@ export default function Footer() {
                 <form action='/contact'>
                     <button className='text-lg py-2 px-3 rounded-lg bg-[#3399ff] text-white'>Contact Us</button>
                 </form>
-                <a><button className='text-lg py-2 px-4 rounded-lg bg-gray-100 text-blue-600'>Donate</button></a>
+                <InternalLink href="/donate"><button className='text-lg py-2 px-4 rounded-lg bg-gray-100 text-blue-600'>Donate</button></InternalLink>
             </FooterColumn>
             </div>
             <div className='flex flex-wrap gap-3 pb-3'>

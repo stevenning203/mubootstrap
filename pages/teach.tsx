@@ -1,8 +1,6 @@
-import MUHeader from "../components/header";
+import MUForm, { Dropdown, EmailField, Field, PhoneField } from "../components/muform";
 import MUPage from "../components/page";
 import { BlueWideDiv, Blurb, BlurbTitle, PageTitle } from "../components/util";
-import MUForm from "../components/muform";
-import { EmailField, Field, Dropdown, PhoneField } from "../components/muform";
 
 /**
  * 

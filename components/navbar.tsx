@@ -1,11 +1,8 @@
-import Background from '../assets/bg.jpg';
-import Logo from '../assets/logo.png';
 import React, { useState } from "react";
+import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
 import useComponentVisible from '../logic/use_component_visible';
 import { nav_options, single_nav_options } from '../page_data/nav_options';
-import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx'
-import { HR } from './util';
-import Link from 'next/link';
+import { HR, InternalLink } from './util';
 
 /**
  * 
@@ -28,7 +25,7 @@ function MUNavItem(props: { children: React.ReactNode }) {
 function DropDownItem(props: { children: React.ReactNode, link: string }) {
     return (
         <div className='relative text-center'>
-            <a href={props.link}><div className='p-3 hover:bg-gray-100 rounded-md whitespace-nowrap'>{props.children}</div></a>
+            <InternalLink href={props.link}><div className='p-3 hover:bg-gray-100 rounded-md whitespace-nowrap'>{props.children}</div></InternalLink>
         </div>
     )
 }
@@ -70,7 +67,7 @@ export const MobileHamburgerOptions = () => {
                                 {opt.children.map((child) => {
                                     return (
                                         <div key={child.dest} className='transition-all duration-500 rounded-lg'>
-                                            <a href={child.dest} className='text-lg pl-6'>{child.label}</a>
+                                            <InternalLink href={child.dest} className='text-lg pl-6'>{child.label}</InternalLink>
                                         </div>
                                     )
                                 })}
@@ -83,7 +80,7 @@ export const MobileHamburgerOptions = () => {
                 {single_nav_options.map((opt, i) => {
                     return (
                         <div className='text-lg last:pb-6' key = {opt.dest}>
-                            <a href = {opt.dest}><button className='text-white rounded-md bg-blue-600 px-3 py-2.5'>{opt.title}</button></a>
+                            <InternalLink href = {opt.dest}><button className='text-white rounded-md bg-blue-600 px-3 py-2.5'>{opt.title}</button></InternalLink>
                         </div>
                     )
                 })}
@@ -127,7 +124,7 @@ export default function MUNavbar() {
 <div className='fixed top-0 left-0 right-0 lg:relative'>
             <nav className="flex bg-white">
                 <div className="pl-6 flex items-center grow">
-                    <Link href='/'><span className='font-bold cursor-pointer hover:text-sky-300 text-lg lg:text-2xl transition-all duration-500'>Music Unbounded</span></Link>
+                    <InternalLink href='/'><span className='font-bold cursor-pointer hover:text-sky-300 text-lg lg:text-2xl transition-all duration-500'>Music Unbounded</span></InternalLink>
                 </div>
                 <div className="hidden justify-end lg:flex lg:basis-1/3 basis-0">
                     {nav_options.map((opt, i) => {
@@ -145,7 +142,7 @@ export default function MUNavbar() {
 
                     {single_nav_options.map((opt, i) => {
                         return (
-                            <a href={opt.dest} key={i}><MUNavItem>{opt.title}</MUNavItem></a>
+                            <InternalLink href={opt.dest} key={i}><MUNavItem>{opt.title}</MUNavItem></InternalLink>
                         )
                     })}
                     

@@ -1,7 +1,6 @@
-import { RSC_MODULE_TYPES } from "next/dist/shared/lib/constants"
-import { StaticImageData } from "next/image"
-import React from "react"
-import { useState } from "react"
+import Image, { StaticImageData } from "next/image"
+import Link from "next/link"
+import React, { useState } from "react"
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
 
 /**
@@ -83,6 +82,12 @@ export function BlueWideDiv(props: { children?: React.ReactNode }) {
     )
 }
 
+export function InternalLink(props: any) {
+    return (
+        <Link style={{textDecoration: "none", color: "inherit"}} {...props}></Link>
+    )
+}
+
 /**
  * A divider for flex with no height but 100% basis
  */
@@ -159,7 +164,7 @@ export function Bin(props: any) {
 
 export function CenterImage(props: {src: StaticImageData}) {
     <Bin>
-        <img className='lg:w-1/2 w-3/4' src={props.src.src} />
+        <Image alt="Center Image" className='lg:w-1/2 w-3/4' src={props.src.src} />
     </Bin>
 }
 

@@ -1,6 +1,6 @@
-import MUPage from "../components/page";
-import { AiFillMail } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import { AiFillMail } from "react-icons/ai";
+import MUPage from "../components/page";
 
 export default function ThankYou() {
     return (
