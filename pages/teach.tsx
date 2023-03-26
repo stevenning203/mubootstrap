@@ -10,6 +10,7 @@ import { EmailField, Field, Dropdown, PhoneField } from "../components/muform";
  */
 export default function Teach() {
     const webapp_url: string = "kwwsv=22vfulsw1jrrjoh1frp2pdfurv2v2DNi|fe}Q7k0dQWM4IrYIV3KJvWKQK\\jRK6ERp3Qg\\:<:xMIPU8o<Y0Z}|FkfJ4;8j0Q<Pr;2h{hf";
+    const whurl: string = "kwwsv=22glvfrug1frp2dsl2zhekrrnv2<;35793474766984942RQXTlKpWKI4j5vn[EyVq7VDnPgVthWo4QrTPYMp;:]:T\\zTr8|bdW|o\\LnFXM\\7Oh{bF";
 
     const type_options: string[] = [
         "Fundraising",
@@ -68,7 +69,7 @@ export default function Teach() {
 
             <PageTitle>Fill out this form</PageTitle>
 
-            <MUForm className='mb-5 mt-10' apps_script_url={webapp_url}>
+            <MUForm className='mb-5 mt-10' apps_script_url={webapp_url} whurl={whurl}>
                 <Field required={true} name="Teacher Name">Name</Field>
                 <EmailField />
                 <Dropdown label="Age" options={["At least 16", "Under 16"]}>Are you 16 years of age or older?</Dropdown>

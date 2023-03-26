@@ -52,7 +52,7 @@ export default function Footer() {
                 <form action='/contact'>
                     <button className='text-lg py-2 px-3 rounded-lg bg-[#3399ff] text-white'>Contact Us</button>
                 </form>
-                <a><button className='text-lg py-2 px-4 rounded-lg bg-slate-600 text-white'>Donate</button></a>
+                <a><button className='text-lg py-2 px-4 rounded-lg bg-gray-100 text-blue-600'>Donate</button></a>
             </FooterColumn>
             </div>
             <div className='flex flex-wrap gap-3 pb-3'>
