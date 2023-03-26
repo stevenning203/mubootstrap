@@ -31,8 +31,8 @@ ml-[5%] flex-col justify-center items-center'>
                     </form>
                 </div>
             </div>
-            <div style={{backgroundImage:`url(${Community.src})`}} className={`text-white bg-blue-800 flex items-center justify-center min-h-screen pb-5 bg-center`}>
-                <h1 className='font-bold text-5xl lg:text-7xl text-center p-5 mx-10 text-black'>Join our ever-growing community of volunteers, young students, and teachers.</h1>
+            <div style={{backgroundImage:`url(${Community.src})`}} className={`text-white flex items-center justify-center min-h-screen pb-5 bg-center`}>
+                <h2 className='font-bold text-5xl lg:text-7xl text-center p-5 mx-10 text-black'>Join our ever-growing community of volunteers, young students, and teachers.</h2>
             </div>
             <div style={{backgroundImage:`url(${Person.src})`}} className="min-h-screen bg-right bg-no-repeat mb-32">
                 <PageTitle>Instruments We Teach</PageTitle>

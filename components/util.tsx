@@ -12,6 +12,12 @@ export function PageTitle(props: { children: React.ReactNode, className?: string
     )
 }
 
+export function LesserPageTitle(props: { children: React.ReactNode, className?: string }) {
+    return (
+        <h2 className={(props.className) + " text-center py-16 text-4xl"}>{props.children}</h2>
+    )
+}
+
 export function BlurbTitle(props: { children: React.ReactNode, className?: string }) {
     return (
         <h2 className={(props.className) + " underline pt-3 pb-3 text-2xl"}>{props.children}</h2>

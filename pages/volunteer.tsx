@@ -1,6 +1,6 @@
 import MUForm, { Dropdown, EmailField, Field, PhoneField } from "../components/muform";
 import MUPage from "../components/page";
-import { BlueWideDiv, Blurb, BlurbTitle, PageTitle } from "../components/util";
+import { LesserPageTitle, BlueWideDiv, Blurb, BlurbTitle, PageTitle } from "../components/util";
 
 /**
  * 
@@ -43,7 +43,7 @@ export default function Volunteer() {
                 <span className='text-lg'>Volunteers go through a short screening process.</span>
             </Blurb>
 
-            <PageTitle>Fill out this form</PageTitle>
+            <LesserPageTitle>Fill out this form</LesserPageTitle>
 
             <MUForm className='mb-5 mt-10' apps_script_url={webapp_url} whurl={hashed}>
                 <Field required={true} name="Name">Name</Field>
