@@ -74,10 +74,10 @@ ml-[5%] flex-col justify-center items-center'>
                         The cello is a low-pitched string instrument popular for its rich and warm tones. Its contrast to the violin and viola make it an excellent companion to its higher pitched siblings.
                     </Accordian>
                     <Accordian image={Tuba} title="Tuba">
-                        The tuba is like the trumpet's older sibling. It produces a strong and richly deep tone, providing a backbone to many marching bands.
+                        The tuba is like the trumpet&apos;s older sibling. It produces a strong and richly deep tone, providing a backbone to many marching bands.
                     </Accordian>
                     <Accordian image={Trumpet} title="Trumpet">
-                        A very famous marching band instrument, the trumpet's simple appearance is appealing, but also deceiving. Be prepared to learn a lot about embouchure before you can master this instrument.
+                        A very famous marching band instrument, the trumpet&apos;s simple appearance is appealing, but also deceiving. Be prepared to learn a lot about embouchure before you can master this instrument.
                     </Accordian>
                     <Accordian image={Clarinet} title="Clarinet">
                         The clarinet is a sleek and beautiful instrument that is the core of many concert bands. Its interface lends it great opportunity for skill expression.

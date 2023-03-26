@@ -16,7 +16,6 @@ export default function Donate() {
                 </Bin>
                 <Bin className='text-center'>
                     <Blurb>Music Unbounded will provide tax receipts for donations.</Blurb>
-                    <Blurb></Blurb>
                 </Bin>
             </div>
 

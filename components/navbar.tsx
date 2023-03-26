@@ -5,6 +5,7 @@ import useComponentVisible from '../logic/use_component_visible';
 import { nav_options, single_nav_options } from '../page_data/nav_options';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx'
 import { HR } from './util';
+import Link from 'next/link';
 
 /**
  * 
@@ -126,7 +127,7 @@ export default function MUNavbar() {
 <div className='fixed top-0 left-0 right-0 lg:relative'>
             <nav className="flex bg-white">
                 <div className="pl-6 flex items-center grow">
-                    <a href='/'><span className='font-bold hover:text-sky-300 text-lg lg:text-2xl transition-all duration-500'>Music Unbounded</span></a>
+                    <Link href='/'><span className='font-bold cursor-pointer hover:text-sky-300 text-lg lg:text-2xl transition-all duration-500'>Music Unbounded</span></Link>
                 </div>
                 <div className="hidden justify-end lg:flex lg:basis-1/3 basis-0">
                     {nav_options.map((opt, i) => {
