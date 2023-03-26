@@ -20,7 +20,7 @@ export default function Lessons() {
         <MUPage>
             <PageTitle>About Our Lessons</PageTitle>
             <Bin className='my-10'>
-                <h2 className='text-center text-2xl'>A curriculum shaped for your child's creative mind</h2>
+                <h2 className='text-center text-2xl'>A curriculum shaped for your child&apos;s creative mind</h2>
 
                 <div className='flex justify-center my-10'>
                     <img className='rounded-2xl w-4/5' src={SheetMusic.src} />
