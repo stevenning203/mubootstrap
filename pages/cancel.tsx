@@ -1,5 +1,5 @@
 import MUPage from "../components/page";
-import { Bin, PageTitle } from "../components/util";
+import { Bin, InternalLink, PageTitle } from "../components/util";
 
 export default function Cancel() {
     return (
@@ -10,9 +10,7 @@ export default function Cancel() {
                 <div className=''>
                     <h2 className='text-center text-2xl text-gray-500'>No charge was made</h2>
                     <div className='flex justify-center my-12'>
-                        <form action='/'>
-                            <button className='bg-blue-600 text-white px-3 py-3 rounded-lg' type='submit'>Go Home</button>
-                        </form>
+                        <InternalLink href='/' className='bg-blue-600 text-white px-3 py-3 rounded-lg' type='submit'>Go Home</InternalLink>
                     </div>
                 </div>
             </Bin>

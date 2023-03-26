@@ -47,11 +47,9 @@ export default function Footer() {
                 <FooterTitle>Register</FooterTitle>
                 <FooterLink title='Register for Lessons' dest='/register' />
             </FooterColumn>
-            <FooterColumn className='flex gap-4'>
-                <form action='/contact'>
-                    <button className='text-lg py-2 px-3 rounded-lg bg-[#3399ff] text-white'>Contact Us</button>
-                </form>
-                <InternalLink href="/donate"><button className='text-lg py-2 px-4 rounded-lg bg-gray-100 text-blue-600'>Donate</button></InternalLink>
+            <FooterColumn className='flex gap-4 text-blue-800'>
+                <div><InternalLink href="/contact" className='text-lg py-3 px-3 rounded-lg bg-[#3399ff] text-white'>Contact Us</InternalLink></div>
+                <div><InternalLink href="/donate" className='text-lg py-3 px-4 rounded-lg bg-gray-100'>Donate</InternalLink></div>
             </FooterColumn>
             </div>
             <div className='flex flex-wrap gap-3 pb-3'>
