@@ -90,7 +90,7 @@ export function BlueWideDiv(props: { children?: React.ReactNode }) {
 
 export function InternalLink(props: any) {
     return (
-        <Link style={{textDecoration: "none", color: "inherit"}} {...props}></Link>
+        <Link style={{textDecoration: "none", color: "inherit", whiteSpace: "nowrap"}} {...props}></Link>
     )
 }
 
