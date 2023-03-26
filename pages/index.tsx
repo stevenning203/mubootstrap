@@ -13,7 +13,7 @@ import Viola from '../assets/viola.jpg'
 import Violin from '../assets/violin.jpg'
 import Accordian from '../components/accordian'
 import MUPage from '../components/page'
-import { PageTitle } from '../components/util'
+import { InternalLink, PageTitle } from '../components/util'
 
 /**
  * 
@@ -26,9 +26,7 @@ export default function Home() {
                 <div className='mt-[40%] lg:mt-[12%] md:mt-[25%] sm:mt-[35%]
 ml-[5%] flex-col justify-center items-center'>
                     <h1 className='w-full text-white font-lighter text-left text-4xl lg:text-7xl md:text-5xl font-lato tracking-[.02em] leading-tight  pb-[30px]'>Making Music Possible, <br /> for Every Child</h1>
-                    <form action='/register'>
-                        <button className='from-blue-800 to-blue-600 bg-gradient-to-r text-white tracking-[.1em] px-4 py-3 font-noto text-xl rounded-lg transition-all duration-500 shadow-lg shadow-white'>Register</button>
-                    </form>
+                        <InternalLink href="/register" className='from-blue-800 to-blue-600 bg-gradient-to-r text-white tracking-[.1em] px-4 py-3 font-noto text-xl rounded-lg transition-all duration-500 shadow-lg shadow-white'>Register</InternalLink>
                 </div>
             </div>
             <div style={{backgroundImage:`url(${Community.src})`}} className={`text-white flex items-center justify-center min-h-screen pb-5 bg-center`}>
