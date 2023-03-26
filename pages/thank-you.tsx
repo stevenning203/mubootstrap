@@ -11,7 +11,9 @@ export default function ThankYou() {
                 <h1 className='text-center text-5xl lg:text-7xl my-8'>Thank <span className='text-blue-600'>You,</span></h1>
                 <h2 className='text-center text-2xl lg:text-4xl my-6'>Your form has been sucessfully submitted.</h2>
                 <h3 className='text-center text-xl lg:text-2xl text-slate-500'>We will get back to your email within a week!</h3>
-                <InternalLink href='/' className='text-lg px-4 py-3 bg-stone-600 text-white rounded-lg' type="submit">Go Home</InternalLink>
+                <div className='flex justify-center'>
+                    <InternalLink href='/' className='text-lg px-4 py-3 bg-stone-600 text-white rounded-lg' type="submit">Go Home</InternalLink>
+                </div>
             </div>
         </MUPage>
     )
