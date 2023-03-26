@@ -5,7 +5,7 @@ import { Bin, ToPublicUTF8 } from "./util";
  * Redirect the user to the thank you page
  */
 function RedirectToThankYou(): void {
-    window.location.href = "/thank-you";
+    window.location.href = "thank-you";
 }
 
 /**
