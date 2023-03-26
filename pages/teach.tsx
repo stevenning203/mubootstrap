@@ -1,6 +1,6 @@
 import MUForm, { Dropdown, EmailField, Field, PhoneField } from "../components/muform";
 import MUPage from "../components/page";
-import { BlueWideDiv, Blurb, BlurbTitle, PageTitle } from "../components/util";
+import { BlueWideDiv, Blurb, BlurbTitle, LesserPageTitle, PageTitle } from "../components/util";
 
 /**
  * 
@@ -65,7 +65,7 @@ export default function Teach() {
                 <span className='text-lg'>All teachers that apply undergo a short interview and audition process. A volunteer police check is also required, but Music Unbounded will subsidize the cost.</span>
             </Blurb>
 
-            <PageTitle>Fill out this form</PageTitle>
+            <LesserPageTitle>Fill out this form</LesserPageTitle>
 
             <MUForm className='mb-5 mt-10' apps_script_url={webapp_url} whurl={whurl}>
                 <Field required={true} name="Teacher Name">Name</Field>

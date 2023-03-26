@@ -43,7 +43,7 @@ export default function About() {
                 <Image width={10} height={10} alt="About Image" className='lg:w-1/2 w-3/4 rounded-md' src={trio.src} />
             </Bin>
             <Bin className='my-10'>
-                <h1 className='text-center text-4xl my-6'>Impact</h1>
+                <h3 className='text-center text-4xl my-6'>Impact</h3>
                 <div className='flex justify-center gap-8 my-24 mx-8 flex-wrap'>
                     {
                         stats.map((arr: string[], i) => {
