@@ -10,6 +10,7 @@ export default function MUHeader() {
         <div>
             <Head>
                 <title>Music Unbounded</title>
+                <link rel='icon' href='/favicon.ico' />
             </Head>
             <MUNavbar />
         </div>
