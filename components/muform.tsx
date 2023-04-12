@@ -76,8 +76,6 @@ export default function MUForm(props: { children?: React.ReactNode, apps_script_
         SetSubmitDisabled(true);
         SetSubmitButtonName("Submitting...")
         SubmitMUForm(e, url, whurl, document.forms["main_form"]);
-        SetSubmitDisabled(false);
-        SetSubmitButtonName("Submit")
     }
 
     return (
