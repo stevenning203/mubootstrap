@@ -34,18 +34,18 @@ export default function Home() {
                 <Bin className='py-16'>
                     <ConcertText>Music Unbounded</ConcertText>
                     <ConcertText>Presents</ConcertText>
-                    <div className='my-10 font-news text-center text-white text-6xl'>COMMUNITY <br/> CONCERT</div>
+                    <div className='my-10 font-news text-center text-white font-bold md:text-6xl text-4xl'>COMMUNITY <br/> CONCERT</div>
                     <ConcertText>August 25 2023</ConcertText>
                     <ConcertText className='italic font-thin my-3'>Ellerslie Road Baptist Church</ConcertText>
                     <ConcertText className='italic'>4:00 pm - 8:00 pm</ConcertText>
-                    <ConcertText className='text-xl my-3 text-center mx-16 pb-16'>
+                    <ConcertText className='text-xl my-3 text-center mx-4 md:mx-16 pb-16'>
                         Music Unbounded is hosting our FIRST annual community concert to build musical community in Edmonton and promote the opportunity for young musicians to gain performance experience!
                         <br/>
                         Admission is FREE and all are welcome to attend!
                         <br/>
                         All performers are welcome as well! The application form can be found on our Linktree:
                         <br/>
-                        <a href="https://linktr.ee/music.unbounded">https://linktr.ee/music.unbounded</a>
+                        <a href="https://linktr.ee/music.unbounded">Link Tree</a>
                         <br />
                         Want to perform? <a href = "https://forms.gle/v5izPoteiwaxbcu37">Click here!</a>
                     </ConcertText>
