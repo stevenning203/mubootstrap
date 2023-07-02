@@ -10,7 +10,8 @@ module.exports = {
         'sans': ['Monserrat', "Arial"],
           'lato': ['Lato', "Arial"],
           'noto': ["Noto Sans", "Arial"],
-          'fancy': ['Unbounded', "Noto Sans"]
+          'fancy': ['Unbounded', "Noto Sans"],
+          'news' : ["Times New Roman"]
     },
     extend: {},
   },
