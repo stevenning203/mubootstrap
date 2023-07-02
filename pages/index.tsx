@@ -30,7 +30,7 @@ export default function Home() {
     return (
         <MUPage>
 
-            <div className='bg-repeat-x bg-bottom bg-black min-h-screen'>
+            <div className='bg-repeat-x bg-bottom bg-gradient-to-r from-red-600 to-purple-600 min-h-screen'>
                 <Bin className='py-16'>
                     <ConcertText>Music Unbounded</ConcertText>
                     <ConcertText>Presents</ConcertText>
@@ -51,11 +51,6 @@ export default function Home() {
                     </ConcertText>
                 </Bin>
             </div>
-            <div style={{backgroundImage:`url(${Made.src})`}} className='bg-bottom py-32 bg-gray-300'>
-
-            </div>
-
-
             <div style={{backgroundImage:`url(${Background.src})`}} className="bg-no-repeat bg-cover bg-center flex h-screen">
                 <div className='mt-[40%] lg:mt-[12%] md:mt-[25%] sm:mt-[35%]
 ml-[5%] flex-col justify-center items-center'>
