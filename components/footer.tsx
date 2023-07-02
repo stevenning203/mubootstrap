@@ -63,7 +63,7 @@ export default function Footer() {
             <div className='pb-10'>
                 Registration Number: 799098306RR0001
                 <br />
-                Website Version: 23611
+                Website Version: 23701
             </div>
         </footer>
     )
