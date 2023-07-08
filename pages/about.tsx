@@ -39,6 +39,13 @@ export default function About() {
                     Music has many benefits, ranging from brain growth and academic success to being a creative outlet and source of entertainment. Each and every teacher, volunteer, and board member here at Music Unbounded have been positively influenced throughout their life through music. We are all very grateful to have been given this opportunity to learn, however, we recognize that the cost of learning music can be prohibitive for some and we hope to use our passion to make music accessible to everyone.
                 </Blurb>
             </Bin>
+            <div className='bg-gradient-to-r from-red-600 to-red-400 py-16 my-24'>
+            <Bin className='my-12'>
+                <h2 className='text-3xl my-3 text-center text-white'>Check out our CBC interview!</h2>
+                <div className='text-center text-xl text-white'>Click Here: <a href ='https://www.cbc.ca/news/canada/edmonton/edmonton-non-profit-connects-kids-with-free-music-lessons-1.6677993'>Loran scholar Hannah Liu talks about how Music Unbounded helped her student</a></div>
+            </Bin>
+            </div>
+           
             <Bin className='flex justify-center'>
                 <Image width={10} height={10} alt="About Image" className='lg:w-1/2 w-3/4 rounded-md' src={trio.src} />
             </Bin>
